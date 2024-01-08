@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>guy762_KotORFaction_MandoClan</defName>
+    <label>Mandalorian clan</label>
+    <pawnSingular>Mandalorian</pawnSingular>
+    <pawnsPlural>Mandalorians</pawnsPlural>
+    <categoryTag>Pirate</categoryTag>
+    <canMakeRandomly>false</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+	<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
+    <hidden>true</hidden>
+    <description>An unaffiliated clan of Mandalorian warriors.</description>
+    <factionIconPath>World/MandoNeoCrusaders</factionIconPath>
+    <factionNameMaker>guy762_NamerFaction_MandoClan</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <colorSpectrum>
+      <li>RGB(160,25,30)</li>
+    </colorSpectrum>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <maxCountAtGameStart>2</maxCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+	<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+	
+	
+    <allowedCultures>
+		<li>guy762_culture_mando</li>
+	</allowedCultures>
+	
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">guy762_MemeDef_mando</li>
+	</requiredMemes>
+	<allowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+	</allowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Disapproved</li>
+	</disallowedPrecepts>
+	
+	
+    <!--xenotypeSet>                                                     THIS BLOCK HAS BEEN MOVED TO THE PAWNKINDS FILE
+      <xenotypeChances>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.25</Baseliner>
+		<guy762_xenotype_devaronian MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_devaronian>
+		<guy762_xenotype_duros MayRequire="Ludeon.RimWorld.Biotech">0.05</guy762_xenotype_duros>
+		<guy762_xenotype_falleen MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_falleen>
+		<guy762_xenotype_feeorin MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_feeorin>
+		<guy762_xenotype_iridonian MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_iridonian>
+		<guy762_xenotype_nautolan MayRequire="Ludeon.RimWorld.Biotech">0.03</guy762_xenotype_nautolan>
+		<guy762_xenotype_rodian MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_rodian>
+		<guy762_xenotype_snivvian MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_snivvian>
+		<guy762_xenotype_sullustan MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_sullustan>
+		<guy762_xenotype_togruta MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_togruta>
+		<guy762_xenotype_twilek MayRequire="Ludeon.RimWorld.Biotech">0.15</guy762_xenotype_twilek>
+		<guy762_xenotype_weequay MayRequire="Ludeon.RimWorld.Biotech">0.07</guy762_xenotype_weequay>
+		<guy762_xenotype_zabrak MayRequire="Ludeon.RimWorld.Biotech">0.08</guy762_xenotype_zabrak>
+		<guy762_xenotype_zeltron MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_zeltron>
+      </xenotypeChances>
+    </xenotypeSet-->
+	
+	<basicMemberKind>MandoClan_trooper</basicMemberKind>
+	<leaderTitle>field marshal</leaderTitle>
+	<fixedLeaderKinds>
+		<li>MandoClan_fieldmarshal</li>
+	</fixedLeaderKinds>
+	
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.33</commonality>
+      </li>
+	  <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+		<commonality>0.33</commonality>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/Expanding/SettlementTemporary</settlementTexturePath>
+	
+	
+	
+	<modExtensions>
+      <li Class="VFECore.FactionDefExtension">
+		<startingGoodwillByFactionDefs>
+			<guy762_KotORFaction_Militia>-25~0</guy762_KotORFaction_Militia>
+			<guy762_KotORFaction_MercGuild>-75~-50</guy762_KotORFaction_MercGuild>
+			<guy762_KotORFaction_Trandoshans>-50~25</guy762_KotORFaction_Trandoshans>
+		</startingGoodwillByFactionDefs>
+		<excludeFromCommConsole>true</excludeFromCommConsole>
+      </li>
+    </modExtensions>
+	
+	
+	
+	
+	
+	
+	
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	
+	
+	<pawnGroupMakers>
+	
+	  <li>
+        <!-- quick raid -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <MandoClan_trooper>50</MandoClan_trooper>
+          <MandoClan_warrior>100</MandoClan_warrior>
+          <MandoClan_scout>50</MandoClan_scout>
+          <MandoClan_commando>10</MandoClan_commando>
+          <MandoClan_rallymaster>5</MandoClan_rallymaster>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- skirmish -->
+        <kindDef>Combat</kindDef>
+        <commonality>75</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>ImmediateAttackSmart</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+		  <MandoClan_trooper>100</MandoClan_trooper>
+          <MandoClan_warrior>75</MandoClan_warrior>
+          <MandoClan_scout>25</MandoClan_scout>
+          <MandoClan_commando>10</MandoClan_commando>
+          <MandoClan_rallymaster>5</MandoClan_rallymaster>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- territory intrusion -->
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+		<disallowedStrategies>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSmart</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+		  <MandoClan_trooper>100</MandoClan_trooper>
+          <MandoClan_warrior>25</MandoClan_warrior>
+          <MandoClan_commando>75</MandoClan_commando>
+          <MandoClan_marauder>25</MandoClan_marauder>
+		  <MandoClan_heavy>50</MandoClan_heavy>
+          <MandoClan_rallymaster>100</MandoClan_rallymaster>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- assault -->
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+		</disallowedStrategies>
+        <options>
+		  <MandoClan_trooper>50</MandoClan_trooper>
+          <MandoClan_warrior>25</MandoClan_warrior>
+          <MandoClan_commando>100</MandoClan_commando>
+          <MandoClan_marauder>25</MandoClan_marauder>
+          <MandoClan_heavy>25</MandoClan_heavy>
+          <MandoClan_sapper>75</MandoClan_sapper>
+          <MandoClan_rallymaster>100</MandoClan_rallymaster>
+          <MandoClan_champion>10</MandoClan_champion>
+        </options>
+      </li>
+	  
+	  
+	  
+	</pawnGroupMakers>
+	
+  </FactionDef>
+  
+  
+  
+  
+  <RulePackDef>
+    <defName>guy762_NamerFaction_MandoClan</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[clan] [msyl][msyl]</li>
+
+
+        <li>clan->Clan</li>
+
+        <li>msyl->nyar</li>
+        <li>msyl->alg</li>
+        <li>msyl->xan</li>
+        <li>msyl->zel</li>
+        <li>msyl->kil</li>
+        <li>msyl->len</li>
+        <li>msyl->lax</li>
+        <li>msyl->alph</li>
+        <li>msyl->ome</li>
+        <li>msyl->iri</li>
+        <li>msyl->slin</li>
+        <li>msyl->toth</li>
+        <li>msyl->arth</li>
+        <li>msyl->unth</li>
+        <li>msyl->ox</li>
+        <li>msyl->arm</li>
+        <li>msyl->murd</li>
+        <li>msyl->zen</li>
+        <li>msyl->yoth</li>
+        <li>msyl->lite</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

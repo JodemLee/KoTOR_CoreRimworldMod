@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OutlanderFactionBase">
+		<defName>guy762_KotORFaction_Militia</defName>
+		<label>planetary militia</label>
+		<description>The local governance and organized militia of this rim world.</description>
+		<colorSpectrum>
+		  <li>RGB(165,190,160)</li>
+		</colorSpectrum>
+		<classicIdeo>true</classicIdeo>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<listOrderPriority>766</listOrderPriority>
+		<configurationListOrderPriority>766</configurationListOrderPriority>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>4</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>governor</leaderTitle>
+		<factionIconPath>World/Khoonda</factionIconPath>
+		<techLevel>Spacer</techLevel>
+		<xenotypeSet  Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.25</Baseliner>
+			<guy762_xenotype_aqualish MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_aqualish>
+			<guy762_xenotype_devaronian MayRequire="Ludeon.RimWorld.Biotech">0.05</guy762_xenotype_devaronian>
+			<guy762_xenotype_duros MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_duros>
+			<guy762_xenotype_iridonian MayRequire="Ludeon.RimWorld.Biotech">0.03</guy762_xenotype_iridonian>
+			<guy762_xenotype_quarren MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_quarren>
+			<guy762_xenotype_rodian MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_rodian>
+			<guy762_xenotype_snivvian MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_snivvian>
+			<guy762_xenotype_sullustan MayRequire="Ludeon.RimWorld.Biotech">0.05</guy762_xenotype_sullustan>
+			<guy762_xenotype_togruta MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_togruta>
+			<guy762_xenotype_twilek MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_twilek>
+			<guy762_xenotype_weequay MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_weequay> <!--0.95 total-->
+			<guy762_xenotype_zabrak MayRequire="Ludeon.RimWorld.Biotech">0.07</guy762_xenotype_zabrak>
+			<guy762_xenotype_zeltron MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_zeltron>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		</disallowedPrecepts>
+		 <pawnGroupMakers>
+		  <li>
+			<!-- Normal fights, standard mix -->
+			<kindDef>Combat</kindDef>
+			<options>
+			  <PM_scout>5</PM_scout>
+			  <PM_trooper>10</PM_trooper>
+			  <PM_heavy>1.5</PM_heavy>
+			  <PM_wardroid_SentWD>7</PM_wardroid_SentWD>
+			</options>
+		  </li>
+		  <li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+			  <PM_civilian>20</PM_civilian>
+			  <KotORCiv_spacer>1</KotORCiv_spacer>
+			  <PM_utilitydroid_3C>2</PM_utilitydroid_3C>
+			  <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+			  <PM_trooper>10</PM_trooper>
+			  <PM_protocoldroid_GE3PD>5</PM_protocoldroid_GE3PD>
+			  <Town_Councilman>10</Town_Councilman>
+			</options>
+		  </li>
+		  <li>
+			<kindDef>Trader</kindDef>
+			<traders>
+			  <Town_Trader>5</Town_Trader>
+			  <PM_protocoldroid_GE3PD>1</PM_protocoldroid_GE3PD>
+			</traders>
+			<carriers>
+			  <KOTOR_Bantha>6</KOTOR_Bantha>
+			  <KOTOR_dewback>5</KOTOR_dewback>
+			  <Alpaca>2</Alpaca>
+			</carriers>
+			<guards>
+			  <PM_civilian>3</PM_civilian>
+			  <PM_utilitydroid_3C>2</PM_utilitydroid_3C>
+			  <PM_scout>10</PM_scout>
+			  <PM_trooper>10</PM_trooper>
+			  <PM_heavy>1.5</PM_heavy>
+			  <PM_wardroid_SentWD>7</PM_wardroid_SentWD>
+			</guards>
+		  </li>
+		  <li>
+			<kindDef>Settlement</kindDef>
+			<options>
+			  <KotORCiv_prole>5</KotORCiv_prole>
+			  <PM_civilian>10</PM_civilian>
+			  <KotORCiv_spacer>1</KotORCiv_spacer>
+			  <PM_protocoldroid_GE3PD>3</PM_protocoldroid_GE3PD>
+			  <PM_protocoldroid_GE3LD>7</PM_protocoldroid_GE3LD>
+			  <PM_utilitydroid_R8009>5</PM_utilitydroid_R8009>
+			  <PM_utilitydroid_3C>2</PM_utilitydroid_3C>
+			  <PM_scout>2.5</PM_scout>
+			  <PM_trooper>10</PM_trooper>
+			  <PM_heavy>1.5</PM_heavy>
+			  <PM_wardroid_SentWD>7</PM_wardroid_SentWD>
+			  <Town_Councilman>10</Town_Councilman>
+			</options>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Loggers</kindDef>
+			<commonality>1</commonality>
+			<options>
+			  <Logger>1</Logger>
+			  <PM_protocoldroid_GE3LD>2</PM_protocoldroid_GE3LD>
+			</options>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Farmers</kindDef>
+			<commonality>1</commonality>
+			<options>
+			  <Farmer>1</Farmer>
+			  <PM_protocoldroid_GE3LD>2</PM_protocoldroid_GE3LD>
+			</options>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Miners</kindDef>
+			<commonality>1</commonality>
+			<options>
+			  <Miner>1</Miner>
+			  <PM_miningdroid_KM1MD>2</PM_miningdroid_KM1MD>
+			</options>
+		  </li>
+		  <li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Hunters</kindDef>
+			<commonality>1</commonality>
+			<options>
+			  <PM_hunter>10</PM_hunter>
+			  <PM_scout>10</PM_scout>
+			  <PM_wardroid_SentWD>5</PM_wardroid_SentWD>
+			</options>
+		  </li>
+		</pawnGroupMakers>
+		
+	  </FactionDef>
+
+</Defs>

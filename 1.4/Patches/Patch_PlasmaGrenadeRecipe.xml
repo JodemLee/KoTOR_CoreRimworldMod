@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[DefName="guy762_grenadebelt_plasma"]/costList</xpath>
+	  <value>
+		<costList>
+			<Plasteel>60</Plasteel>
+			<kotor_plasma>60</kotor_plasma>
+		</costList>
+	  </value>
+	</Operation>
+	
+	
+
+
+	
+	
+
+</Patch>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="ATR_BaseMechanicalPawn"]/alienRace/raceRestriction/blackFoodList</xpath>
+	  <order>Append</order>
+	  <value>
+			<li>kotor_grog</li>
+			<li>kotor_Juma</li>
+			<li>kotor_Ardees</li>
+			<li>kotor_deathstick</li>
+			
+			<li>kotor_spice</li>
+	  </value>
+	</Operation>
+
+	
+	
+</Patch>

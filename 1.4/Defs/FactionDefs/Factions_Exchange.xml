@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>guy762_KotORFaction_Exchange</defName>
+    <label>the Exchange</label>
+    <pawnSingular>Exchange goon</pawnSingular>
+    <pawnsPlural>Exchange goons</pawnsPlural>
+    <categoryTag>Pirate</categoryTag>
+    <canMakeRandomly>false</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <hidden>true</hidden>
+    <description>A vast underworld network of criminals, bounty hunters, slavers, mercenaries, spice-dealers, and other scum that stretches across the galaxy.</description>
+    <factionIconPath>World/Exchange</factionIconPath>
+    <fixedName>The Exchange</fixedName>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <colorSpectrum>
+      <li>(255,255,255)</li>
+    </colorSpectrum>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+	<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+	
+    <allowedCultures>
+		<li>Kriminul</li>
+	</allowedCultures>
+	
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+	</requiredMemes>
+	<allowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+	</allowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_HorribleIfInnocent</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOnly</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOrSocial</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
+	</disallowedPrecepts>
+	
+	
+    <!--xenotypeSet>                                                     THIS BLOCK HAS BEEN MOVED TO THE PAWNKINDS FILE
+      <xenotypeChances>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.25</Baseliner>
+		<guy762_xenotype_cathar MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_cathar>
+		<guy762_xenotype_devaronian MayRequire="Ludeon.RimWorld.Biotech">0.07</guy762_xenotype_devaronian>
+		<guy762_xenotype_duros MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_duros>
+		<guy762_xenotype_falleen MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_falleen>
+		<guy762_xenotype_iridonian MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_iridonian>
+		<guy762_xenotype_klatoonian MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_klatoonian>
+		<guy762_xenotype_nautolan MayRequire="Ludeon.RimWorld.Biotech">0.03</guy762_xenotype_nautolan>
+		<guy762_xenotype_rodian MayRequire="Ludeon.RimWorld.Biotech">0.10</guy762_xenotype_rodian>
+		<guy762_xenotype_snivvian MayRequire="Ludeon.RimWorld.Biotech">0.02</guy762_xenotype_snivvian>
+		<guy762_xenotype_sullustan MayRequire="Ludeon.RimWorld.Biotech">0.03</guy762_xenotype_sullustan>
+		<guy762_xenotype_togruta MayRequire="Ludeon.RimWorld.Biotech">0.05</guy762_xenotype_togruta>
+		<guy762_xenotype_trandoshan MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_trandoshan>
+		<guy762_xenotype_twilek MayRequire="Ludeon.RimWorld.Biotech">0.15</guy762_xenotype_twilek>
+		<guy762_xenotype_weequay MayRequire="Ludeon.RimWorld.Biotech">0.07</guy762_xenotype_weequay>
+		<guy762_xenotype_zabrak MayRequire="Ludeon.RimWorld.Biotech">0.07</guy762_xenotype_zabrak>
+		<guy762_xenotype_zeltron MayRequire="Ludeon.RimWorld.Biotech">0.01</guy762_xenotype_zeltron>
+      </xenotypeChances>
+    </xenotypeSet-->
+	
+	<basicMemberKind>Exchange_soldier</basicMemberKind>
+	<leaderTitle>crime lord</leaderTitle>
+	<fixedLeaderKinds>
+		<li>Exchange_crimelord</li>
+	</fixedLeaderKinds>
+	
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+	  <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+		<commonality>0.5</commonality>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/Expanding/SettlementTemporary</settlementTexturePath>
+	
+	
+	<modExtensions>
+      <li Class="VFECore.FactionDefExtension">
+		<startingGoodwillByFactionDefs>
+			<guy762_KotORFaction_HuttCartel>-100</guy762_KotORFaction_HuttCartel>
+			<guy762_KotORFaction_Militia>-50~-25</guy762_KotORFaction_Militia>
+			<guy762_KotORFaction_MandoClan>25~50</guy762_KotORFaction_MandoClan>
+			<guy762_KotORFaction_Trandoshans>0~25</guy762_KotORFaction_Trandoshans>
+		</startingGoodwillByFactionDefs>
+      </li>
+    </modExtensions>
+  </FactionDef>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--RulePackDef>
+    <defName>guy762_NamerFaction_Exchange</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[msyl][msyl] [exchange]</li>
+
+
+        <li>exchange->Exchange</li>
+
+        <li>msyl->nyar</li>
+        <li>msyl->alg</li>
+        <li>msyl->xan</li>
+        <li>msyl->zel</li>
+        <li>msyl->kil</li>
+        <li>msyl->len</li>
+        <li>msyl->lax</li>
+        <li>msyl->alph</li>
+        <li>msyl->ome</li>
+        <li>msyl->iri</li>
+        <li>msyl->slin</li>
+        <li>msyl->toth</li>
+        <li>msyl->arth</li>
+        <li>msyl->unth</li>
+        <li>msyl->ox</li>
+        <li>msyl->arm</li>
+        <li>msyl->murd</li>
+        <li>msyl->zen</li>
+        <li>msyl->yoth</li>
+        <li>msyl->lite</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef-->
+
+</Defs>

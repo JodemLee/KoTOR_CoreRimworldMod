@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- Horned Kath Hound Horn -->
+	<ThingDef ParentName="ResourceVerbBase">
+		<defName>kotor_drop_HornedKathHoundHorn</defName>
+		<label>horned kath hound horn</label>
+		<description>It is very durable and valuable. While somewhat unwieldy as a melee weapon, it can still be deadly.</description>
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<texPath>pawns/Animal_Drops/hornedkathhound_horn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-20</equippedAngleOffset>
+		<statBases>
+			<MarketValue>80</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>1.8</Mass>
+			<Flammability>0.9</Flammability>
+			<DeteriorationRate>0.5</DeteriorationRate>
+		</statBases>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<stackLimit>10</stackLimit>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<tools>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+				</capacities>
+				<power>18.2</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+			<li>
+				<label>base</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<!-- Arkonok Crown -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>kotor_drop_ArkonokCrown</defName>
+		<label>arkonok crown</label>
+		<description>A trophy from a fallen Arkonok, treasured by hunters.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>pawns/Animal_Drops/arkonok_crown</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<MarketValue>3.0</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<!-- Bogstalker Tail -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>kotor_drop_bogstalkertail</defName>
+		<label>bogstalker tail</label>
+		<description>A trophy from a fallen bogstalker, used in some alchoholic bevarages.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>pawns/Animal_Drops/bogstalker_tail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<MarketValue>3.0</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+</Defs>

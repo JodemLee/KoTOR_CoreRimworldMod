@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Bogstalker -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>KOTOR_BogstalkerBase</defName>
+		<label>Bogstalker</label>
+		<description>Bogstalkers were ancient creatures. They survived for hundreds of years beneath sprawling undercities. They could also be seen flying around toxic swamps. The bogstalker is resilient and mutated making it poisonous to most predators.</description>
+		<statBases>
+			<MoveSpeed>10.0</MoveSpeed>
+			<MarketValue>700</MarketValue>
+			<ComfyTemperatureMin>5</ComfyTemperatureMin>
+			<ComfyTemperatureMax>75</ComfyTemperatureMax>
+			<FilthRate>5</FilthRate>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>Wing</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Cut</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>KOTOR_BodyDragon</body>
+			<baseHungerRate>2</baseHungerRate>
+			<baseBodySize>0.75</baseBodySize>
+			<baseHealthScale>3.5</baseHealthScale>
+			<foodType>CarnivoreAnimalStrict</foodType>
+			<leatherDef>kotor_leather_bogstalker</leatherDef>
+			<wildness>0.90</wildness>
+			<trainability>Advanced</trainability>
+			<predator>true</predator>
+			<manhunterOnTameFailChance>0.9</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<gestationPeriodDays>18</gestationPeriodDays>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeExpectancy>10</lifeExpectancy>
+			<herdAnimal>false</herdAnimal>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.3</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.55</minAge>
+					<soundWounded>kotor_bogstalker_wounded</soundWounded>
+					<soundDeath>kotor_bogstalker_death</soundDeath>
+					<soundCall>kotor_bogstalker_calls</soundCall>
+					<soundAngry>kotor_bogstalker_angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>kotor_bogstalker_hit</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>kotor_bogstalker_hit</soundMeleeHitBuilding>
+			<soundMeleeMiss>kotor_bogstalker_miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(-0.02, 0, 0.1)</li>
+				<li>(0.28, 0, 0.02)</li>
+				<li>(0.0, 0, 0.02)</li>
+				<li>(-0.28, 0, 0.02)</li>
+			</headPosPerRotation>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>KOTOR_Bogstalker</defName>
+		<label>Bogstalker</label>
+		<race>KOTOR_BogstalkerBase</race>
+		<combatPower>270</combatPower>
+		<ecoSystemWeight>1.5</ecoSystemWeight>
+		<wildGroupSize>2~12</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>pawns/Animal_Fly/bogstalker</texPath>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.475, 0.2, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>pawns/Animal_Fly/dessicated_bogstalker</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>pawns/Animal_Fly/bogstalker</texPath>
+					<drawSize>2.25</drawSize>
+					<shadowData>
+						<volume>(0.72, 0.3, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>pawns/Animal_Fly/dessicated_bogstalker</texPath>
+					<drawSize>2.25</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>pawns/Animal_Fly/bogstalker</texPath>
+					<drawSize>4</drawSize>
+					<shadowData>
+						<volume>(0.95, 0.4, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>pawns/Animal_Fly/dessicated_bogstalker</texPath>
+					<drawSize>4</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>Waist</bodyPartGroup>
+					<thing>kotor_drop_bogstalkertail</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Brith -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>KOTOR_brithBase</defName>
+		<label>brith</label>
+		<description>The brith were a species of large, flying creatures that were indigenous to the grassy Outer Rim world of Dantooine. Their fin-like wings gave them the appearance of swimming through the air. The brith were similar in both appearance and behavior to the Felucian flying manta and, to a lesser extent, the thrantas of Alderaan.</description>
+		<statBases>
+			<MoveSpeed>10</MoveSpeed>
+			<MarketValue>500</MarketValue>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<ComfyTemperatureMax>35</ComfyTemperatureMax>
+			<FilthRate>0</FilthRate>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+				<li>Blunt</li>
+					</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>KOTOR_BodyGlider</body>
+			<baseHungerRate>0.5</baseHungerRate>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.5</baseHealthScale>
+			<foodType>OmnivoreAnimal</foodType>
+			<leatherDef>kotor_leather_brith</leatherDef>
+			<wildness>0.1</wildness>
+			<trainability>None</trainability>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0</manhunterOnDamageChance>
+			<gestationPeriodDays>10</gestationPeriodDays>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeExpectancy>10</lifeExpectancy>
+			<herdAnimal>true</herdAnimal>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.3</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.55</minAge>
+					<soundWounded>kotor_brith_wounded</soundWounded>
+					<soundDeath>kotor_brith_death</soundDeath>
+					<soundCall>kotor_brith_calls</soundCall>
+					<soundAngry>kotor_brith_angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>kotor_brith_hit</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>kotor_brith_hit</soundMeleeHitBuilding>
+			<soundMeleeMiss>kotor_brith_miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(-0.02, 0, 0.1)</li>
+				<li>(0.28, 0, 0.02)</li>
+				<li>(0.0, 0, 0.02)</li>
+				<li>(-0.28, 0, 0.02)</li>
+			</headPosPerRotation>
+		</race>
+	</ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>KOTOR_brith</defName>
+    <label>brith</label>
+    <race>KOTOR_brithBase</race>
+    <combatPower>50</combatPower>
+    <ecoSystemWeight>1.5</ecoSystemWeight>
+    <wildGroupSize>3~10</wildGroupSize>
+    <lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>pawns/Animal_Fly/brith</texPath>
+				<drawSize>1.5</drawSize>
+				<shadowData>
+					<volume>(0.475, 0.2, 0.3)</volume>
+					<offset>(0,0,-0.2)</offset>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>pawns/Animal_Fly/dessicated_brith</texPath>
+				<drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+      <li>
+        <bodyGraphicData>
+          <texPath>pawns/Animal_Fly/brith</texPath>
+          <drawSize>1.75</drawSize>
+          <shadowData>
+            <volume>(0.72, 0.3, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>pawns/Animal_Fly/dessicated_brith</texPath>
+          <drawSize>1.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>pawns/Animal_Fly/brith</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.95, 0.4, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>pawns/Animal_Fly/dessicated_brith</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

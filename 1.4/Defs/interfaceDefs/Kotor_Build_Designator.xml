@@ -4,7 +4,7 @@
 <DesignationCategoryDef>
 	<defName>KOTOR_BuildTab</defName>
 	<label>KOTOR</label>
-	<description>KTOR</description>
+	<description>KoTOR</description>
 	<order>0</order>
 	<specialDesignatorClasses>
 		<li>Designator_Cancel</li>

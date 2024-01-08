@@ -4,7 +4,7 @@
 	<!-- General Details ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<name>Star Wars: Knights of the Outer Rim (CORE)</name>
 	<description>An epic adventure awaits, battle your enemies, build your base, take on the most fearsome being in the universe. Travel in style with spaceships and speeders.</description>
-	<author>MajesticMadman and guy762</author>
+	<author>Guy762, Lee and MajesticMadman</author>
 	
 	<!-- Technical Details ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<supportedVersions>
@@ -13,32 +13,11 @@
 	<packageId>MG.KnightsOfTheOuterRim</packageId>
 	
 	<!-- Requirements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<modDependencies>
-    <li>
-        <packageId>ludeon.rimworld.ideology</packageId>
-        <displayName>Rimworld: Ideology</displayName>
-        <steamWorkshopUrl>https://store.steampowered.com/app/1392840/RimWorld__Ideology/</steamWorkshopUrl>
-    </li>
-	<li>
-		<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-		<displayName>Vanilla Expanded Framework</displayName>
-		<steamWorkshopUrl>steam://url/CommunityFilePage/2023507013</steamWorkshopUrl>
-		<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
-	  </li>
-  </modDependencies>
-  
-  <loadAfter>
+	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
-		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-		<li>smartkar.athenaframework</li>
-		<li>Killathon.MechHumanlikes.AndroidTiersCore</li>
-		<li>guy762.StarWarsXenotypes</li>
-		<li>guy762.KotORWeapons</li>
-		<li>guy762.KotORGadgets</li>
-		<li>guy762.KotORDroids</li>
 	</loadAfter>
   
 </ModMetaData>

@@ -23,7 +23,7 @@
     <thingCategories Inherit="false" />
     <!-- Texture -->
     <graphicData>
-      <texPath>Workbenches/CzekaTech_ReasearchBench</texPath>
+      <texPath>Workbenches/Czerkatech_ResearchBench/CzekaTech_ReasearchBench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(3,3)</drawSize>

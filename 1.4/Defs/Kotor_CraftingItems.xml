@@ -7,7 +7,7 @@
     <label>czerkatech component</label>
     <description>Advanced holotech computing and energy-directing machinery, miniaturized and hardened for the most czerkatech applications.</description>
     <graphicData>
-      <texPath>crafting_items/czerkatech_component</texPath>
+      <texPath>crafting_items/czerkatech_component/czerkatech_component</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>

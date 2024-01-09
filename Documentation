@@ -49,4 +49,4 @@ New Research
 New Workbench
 ===============================================
 1. Go to "KoTOR_CoreRimworldMod/1.4/Defs/Kotor_Workbenches.xml"
-2. Copy Existing Section and update for new bench, include sub-headings and make sure work-giver is present
+2. Copy Existing Section (NOT the research bench) and update for new bench, include sub-headings and make sure work-giver is present

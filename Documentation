@@ -3,4 +3,21 @@ New Minable Materials
 ===============================================
 - Create Mineable "block"
 - Create Smeltable resource (Eg. Ore)
-- Add Smeltable resource to Mineable Block , create recipe for the mine ( add to recipe list under workbench ), add to the extractor
+- Add Smeltable resource to Mineable Block 
+- create recipe for the mine ( add to recipe list under workbench ), 
+
+  • EXAMPLE RECIPE:
+    <RecipeDef ParentName="MiningWork">
+      <defName>mine_RESOURCENAME</defname>
+      <label>mine for RESORUCENAME</label>
+      <description>mining RESOURCENAME</description>
+      <jobString>Mining RESOURCENAME</jobString>
+      <workAmount>HOW_LONG_TO_MINE</workAmount>
+      <products>
+        <SMELTABLE_RESOURCE_DEF>AMOUNT_PER_JOB</SMELTABLE_RESOURCE_DEF>
+      </products>
+    </RecipeDef>
+
+  • Go to "KoTOR_CoreRimworldMod/1.4/Defs/Kotor_Workbenches.xml" , locate the Mine workbench and add to the recipes list
+
+- add to the extractor

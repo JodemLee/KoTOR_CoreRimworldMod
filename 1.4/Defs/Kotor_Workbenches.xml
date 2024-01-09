@@ -129,7 +129,7 @@
     <altitudeLayer>Building</altitudeLayer>
     <!-- Recipes -->
     <recipes>
-      <li>Extract_kotor_unrefinedkolto</li> <!-- Temporary Recipe (Remove when adding first actual recipe ) -->
+      <li>Mine_kotor_unrefinedkolto</li> <!-- Temporary Recipe (Remove when adding first actual recipe ) -->
     </recipes>
   </ThingDef>
   <!-- Work Giver -->

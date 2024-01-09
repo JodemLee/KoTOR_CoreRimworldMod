@@ -1,0 +1,6 @@
+===============================================
+New Minable Materials 
+===============================================
+- Create Mineable "block"
+- Create Smeltable resource (Eg. Ore)
+- Add Smeltable resource to Mineable Block , create recipe for the mine ( add to recipe list under workbench ), add to the extractor

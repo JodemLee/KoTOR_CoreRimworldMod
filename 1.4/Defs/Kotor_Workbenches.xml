@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+  
   <!-- Czerka-Tech Research Bench ============================================================================================================================ -->
   <ThingDef ParentName="BenchBase">
     <!-- Base -->
@@ -76,5 +77,60 @@
       <li>KOTOR_Research_Czerkatech</li>
     </researchPrerequisites>
   </ThingDef>  
+
+  <!-- Mine ============================================================================================================================ -->
+  <ThingDef ParentName="BuildingBase">
+    <!-- Base -->
+    <defName>KotOR_Mine</defName>
+    <label>Resource Mine</label>
+    <description>Allows mining of KOTOR materials</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <!-- Texture -->
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>		
+    <rotatable>false</rotatable> 
+    <graphicData>
+      <texPath>Kolto_Extractor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5,5)</drawSize>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <!-- Cost -->
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <!-- Stats -->
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2400</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <!-- Menu -->
+    <designationCategory>KOTOR_BuildTab</designationCategory>
+    <!-- World -->
+    <size>(2,4)</size>
+    <fillPercent>0.75</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <altitudeLayer>Building</altitudeLayer>
+    <!-- Recipes -->
+    <recipes>
+      <li>Extract_kotor_unrefinedkolto</li> <!-- Temporary Recipe (Remove when adding first actual recipe ) -->
+    </recipes>
+  </ThingDef>
   
 </Defs>

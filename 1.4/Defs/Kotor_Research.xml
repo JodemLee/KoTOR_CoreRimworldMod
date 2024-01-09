@@ -14,6 +14,7 @@
 </ResearchProjectDef>
 
 <!-- Czerka-Tech ============================================================================================================================ -->
+<!-- Doesn't use the base research as this is the entry level research into the mod stuff, and will allow the building of the research bench -->
 <ResearchProjectDef>
 	<defName>KOTOR_Research_Czerkatech</defName>
 	<label>Czerka-Tech</label>

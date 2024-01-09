@@ -1,10 +1,11 @@
 ===============================================
 New Minable Materials 
 ===============================================
-- Create Mineable "block"
-- Create Smeltable resource (Eg. Ore)
-- Add Smeltable resource to Mineable Block 
-- create recipe for the mine ( add to recipe list under workbench ), 
+1. Create Mineable "block"
+2. Create Smeltable resource (Eg. Ore)
+3. Create useable resouce (Eg. Ingot)
+3. Add Smeltable resource to Mineable Block 
+4. create recipe for the mine ( add to recipe list under workbench ), 
 
   • EXAMPLE RECIPE:
     <RecipeDef ParentName="MiningWork">
@@ -20,4 +21,28 @@ New Minable Materials
 
   • Go to "KoTOR_CoreRimworldMod/1.4/Defs/Kotor_Workbenches.xml" , locate the Mine workbench and add to the recipes list
 
-- add to the extractor
+5. Add to the extractor
+6. Add recipe to relevant workbench to convert Smeltable Resource into useable resource
+7. Add Textures into "Textures/crafting_items/ITEM"
+
+===============================================
+New Research
+===============================================
+1. Go To:  KoTOR_CoreRimworldMod/1.4/Defs/Kotor_Research.xml
+2. Create New Reseach Project:
+
+  • Example Research:
+  <!-- RESEARCH NAME ============================================================================================================================ -->
+  <ResearchProjectDef ParentName="KOTOR_Research_Base">
+  	<defName>KOTOR_Research_RESEARCHNAME</defName>
+  	<label>RESEARCHNAME</label>
+  	<description>???</description>
+  	<baseCost>???</baseCost>
+  	<prerequisites>
+  		<li>???</li>
+  	</prerequisites>
+  	<researchViewX>0</researchViewX>
+  	<researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+

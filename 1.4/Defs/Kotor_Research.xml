@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- Research Tab ================================================================ -->
+	<!-- Research Tab ============================================================================================================================ -->
 	<ResearchTabDef>
 		<defName>kotor_ResearchTab</defName>
 		<label>KOTOR</label>
 	</ResearchTabDef>
 	
-	<!-- KOTOR Research Base ================================================================ -->
+	<!-- KOTOR Research Base ============================================================================================================================ -->
 	<ResearchProjectDef Name="KOTOR_Research_Base" Abstract="True">
 		<tab>kotor_ResearchTab</tab>
 		<techLevel>Spacer</techLevel>
@@ -90,7 +90,7 @@
     </researchPrerequisites>
   </ThingDef>
 
-  <!-- Czerka-Tech ================================================================ -->
+	<!-- Czerka-Tech ============================================================================================================================ -->
 	<ResearchProjectDef>
 		<defName>KOTOR_Research_Czerkatech</defName>
 		<label>Czerka-Tech</label>

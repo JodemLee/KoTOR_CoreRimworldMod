@@ -50,3 +50,8 @@ New Workbench
 ===============================================
 1. Go to "KoTOR_CoreRimworldMod/1.4/Defs/Kotor_Workbenches.xml"
 2. Copy Existing Section (NOT the research bench) and update for new bench, include sub-headings and make sure work-giver is present
+
+===============================================
+Recipies
+===============================================
+1. Recipies should be added to the XML when the crafted item is. Eg. Czerka-Tech Components are in the craftingItems XML there recipe should be stored there with them

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- Peragian Fuel ================================================================ -->
+	<!-- Ore -->
+	<ThingDef ParentName="KOTOR_Mineable">
+		<defName>KOTOR_MineablePeragianFuel</defName>
+		<label>Peragian Fuel Deposit</label>
+		<description>A highly-volatile deposit of Peragian fuel. Attacks from any explosives or blaster weapons will detonate this deposit resulting in a massive explosion, though it can safely be mined or destroyed using sonic weapons and specialized mining lasers.</description>
+		<graphicData>
+			<color>(60,60,50)</color>
+			<colorTwo>(255,150,0)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+		</statBases>
+		<building>
+			<mineableThing>KOTOR_RawPeragianFuel</mineableThing>
+			<mineableYield>20</mineableYield>
+			<mineableScatterCommonality>0.1</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~30</mineableScatterLumpSizeRange>
+		</building>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<startWickOnDamageTaken>
+					<li>guy762_RangedDamage_energy</li>
+				    <li>guy762_MeleeDamage_energy</li>
+				    <li>guy762_MeleeDamage_ecut</li>
+				    <li>guy762_MeleeDamage_estab</li>
+				    <li>guy762_ExplosiveDamage_energy</li>
+					<li>guy762_RangedDamage_ion</li>
+					<li>guy762_ExplosiveDamage_ion</li>
+					<li>guy762_MeleeDamage_ion</li>
+					<li>guy762_GrenadeDamage_ion</li>
+					<li>Flame</li>
+					<li>Burn</li>
+					<li>Bomb</li>
+					<li>BombSuper</li>
+					<li>guy762_GrenadeDamage_plasma</li>
+					<li>guy762_GrenadeDamage_thermaldet</li>
+				</startWickOnDamageTaken>
+				<requiredDamageTypeToExplode>guy762_RangedDamage_energy</requiredDamageTypeToExplode>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Unrefined Peragian Fuel ================================================================ -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_RawPeragianFuel</defName>
+		<label>unrefined Peragian fuel</label>
+		<description>Named for the system it was discovered in decades ago, "Peragian fuel" refers to a variety of similar semi-solid ignitable compounds found across the galaxy. While unrefined this fuel is highly unstable, and is much too dangerous to use in transport and machines until it has been refined.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>raw_resources/unrefined_fuel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>100</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>1</MaxHitPoints>
+			<MarketValue>5.0</MarketValue>
+			<Mass>0.25</Mass>
+			<Flammability>10</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>70</deepCountPerPortion>
+		<deepLumpSizeRange>2~10</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>guy762_RangedDamage_energy</li>
+				    <li>guy762_MeleeDamage_energy</li>
+				    <li>guy762_MeleeDamage_ecut</li>
+				    <li>guy762_MeleeDamage_estab</li>
+				    <li>guy762_ExplosiveDamage_energy</li>
+					<li>guy762_RangedDamage_ion</li>
+					<li>guy762_ExplosiveDamage_ion</li>
+					<li>guy762_MeleeDamage_ion</li>
+					<li>guy762_GrenadeDamage_ion</li>
+					<li>Flame</li>
+					<li>Burn</li>
+					<li>Bomb</li>
+					<li>BombSuper</li>
+					<li>guy762_GrenadeDamage_plasma</li>
+					<li>guy762_GrenadeDamage_thermaldet</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>100</allowedArchonexusCount>
+	</ThingDef>
+	
+	<!-- Refined Peragian Fuel ================================================================ -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_PeragianFuel</defName>
+		<label>Peragian fuel</label>
+		<description>Refined fuel is far more stable and suitable for use in transport and machines.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>raw_resources/fuel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>100</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>7.0</MarketValue>
+			<Mass>0.25</Mass>
+			<Flammability>10</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>5</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>Flame</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>100</allowedArchonexusCount>
+		<tradeTags>
+		  <li>guy762TT_KotORFuel_common</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!-- Recipe 1x -->
+	<RecipeDef>
+		<defName>KOTOR_PeragianFuel1_recipe</defName>
+		<label>Refine Peragian Fuel</label>
+		<description>Refine Peragian Fuel</description>
+		<jobString>Refining Peragian Fuel</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>2500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawPeragianFuel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawPeragianFuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_PeragianFuel>1</KOTOR_PeragianFuel>
+		</products>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_fuelrefinery</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!-- Recipe 10x -->
+	<RecipeDef>
+		<defName>KOTOR_PeragianFuel10_recipe</defName>
+		<label>Refine Peragian Fuel (x10)</label>
+		<description>Refine Peragian Fuel</description>
+		<jobString>Refining Peragian Fuel</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>2500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawPeragianFuel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawPeragianFuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_PeragianFuel>10</KOTOR_PeragianFuel>
+		</products>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_fuelrefinery</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<!-- Recipe 20x -->
+	<RecipeDef>
+		<defName>KOTOR_PeragianFuel20_recipe</defName>
+		<label>Refine Peragian Fuel (x20)</label>
+		<description>Refine Peragian Fuel</description>
+		<jobString>Refining Peragian Fuel</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>2500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawPeragianFuel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawPeragianFuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_PeragianFuel>20</KOTOR_PeragianFuel>
+		</products>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_fuelrefinery</li>
+		</recipeUsers>
+	</RecipeDef>
+  
+</Defs>

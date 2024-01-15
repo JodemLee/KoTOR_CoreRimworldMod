@@ -98,4 +98,93 @@
       <li>FabricationBench</li>
     </recipeUsers>
   </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_FabricArmorweave</defName>
+		<label>Armorweave</label>
+		<description>A thick, protective mesh suitable for tailoring suits of armor with. Though it is somewhat restrictive, it remains the top choice for military outfitters across the galaxy.</description>
+		<graphicData>
+		  <texPath>crafting_items/armorweave</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MaxHitPoints>175</MaxHitPoints>
+		  <MarketValue>6</MarketValue>
+		  <Mass>0.25</Mass>
+		  <Flammability>0.3</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <StuffPower_Armor_Sharp>1</StuffPower_Armor_Sharp>
+		  <StuffPower_Armor_Blunt>0.8</StuffPower_Armor_Blunt>
+		  <StuffPower_Armor_Heat>1.2</StuffPower_Armor_Heat>
+		  <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+		  <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+		</statBases>
+		<burnableByRecipe>true</burnableByRecipe>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<stuffProps>
+		  <categories>
+			<li>Fabric</li>
+		  </categories>
+		  <commonality>0.75</commonality>
+		  <color>(55,55,60)</color>
+		  <statFactors>
+			<Flammability>0.3</Flammability>
+			<MaxHitPoints>1.5</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+		  </statFactors>
+		</stuffProps>
+		<thingCategories>
+		  <li>Textiles</li>
+		</thingCategories>
+		<tradeTags>
+		  <li>guy762TT_KotORRawMat_common</li>
+		</tradeTags>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="ResourceBase">
+		<defName>guy762_crystalitem_stygium</defName>
+		<label>Crystal, Stygium</label>
+		<description>The stygium mineral can be used to create cloaking effects that foil enemy sensors. In its pure crystal form, it is suitable for a lightsaber.</description>
+		<graphicData>
+		  <texPath>raw_resources/stygium</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<statBases>
+		  <MarketValue>2980</MarketValue>
+		  <Mass>0.2</Mass>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_sabermod_adv</li>
+		  <li>guy762TT_KotORRawMat_rare</li>
+		</tradeTags>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+		  <li>guy762_weaponmod</li>
+		</thingCategories>
+		<tradeability>All</tradeability>
+		<techLevel>Ultra</techLevel>
+	</ThingDef>
+
 </Defs>

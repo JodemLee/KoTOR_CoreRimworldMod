@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Gamorrean Grog ================================================================ -->
+	<ThingDef ParentName="DrugBase">
+		<defName>kotor_grog</defName>
+		<label>Gamorrean Grog</label>
+		<description>Gamorrean grog is great pain killer, but has an aquired taste. Excessive consumption can lead to alcohol blackouts and addiction.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AlcoholHigh</HediffDef>
+			<HediffDef>AlcoholTolerance</HediffDef>
+			<HediffDef>Hangover</HediffDef>
+			<HediffDef>AlcoholAddiction</HediffDef>
+			<HediffDef>Cirrhosis</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+		</descriptionHyperlinks>
+		<possessionCount>6</possessionCount>
+		<graphicData>
+			<texPath>consumables/drugs_alchohol/grog</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<!--equippedAngleOffset>-150</equippedAngleOffset-->
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>15</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.75</Flammability>
+			<Nutrition>0.12</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.08</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.3</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.016</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<!--equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel-->
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.005</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<!--li>
+				<compClass>CompEquippable</compClass>
+			</li-->
+		</comps>
+		<!--weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<tools>
+			<li>
+			<label>bottle</label>
+			<capacities>
+			<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+			<label>neck</label>
+			<capacities>
+			<li>Poke</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+		</tools-->
+		<allowedArchonexusCount>50</allowedArchonexusCount>
+	</ThingDef>	
+	
+	<!-- Recipe -->
+	<RecipeDef>
+		<defName>kotor_grog_recipe</defName>
+		<label>make gamorrean grog</label>
+		<description>Make an gamorrean grog.</description>
+		<jobString>Making gamorrean grog.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>kotor_drop_bogstalkertail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Wort</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Wort</li>
+				<li>kotor_drop_bogstalkertail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<kotor_grog>2</kotor_grog>
+		</products>
+		<researchPrerequisite>KOTOR_Research_Alcohol</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>	
+
+	<!-- Juma Juice ================================================================ -->
+	<ThingDef ParentName="DrugBase">
+		<defName>kotor_Juma</defName>
+		<label>Juma Juice</label>
+		<description>Juma Juice was an alcoholic beverage that could have a variety of harmful effects on the drinker if too much was consumed. The consumer would become drowsy, and unable to balance himself would drop down and remain unconscious for a matter of hours.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AlcoholHigh</HediffDef>
+			<HediffDef>AlcoholTolerance</HediffDef>
+			<HediffDef>Hangover</HediffDef>
+			<HediffDef>AlcoholAddiction</HediffDef>
+			<HediffDef>Cirrhosis</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+		</descriptionHyperlinks>
+		<possessionCount>6</possessionCount>
+		<graphicData>
+			<texPath>consumables/drugs_alchohol/juma</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<!--equippedAngleOffset>-150</equippedAngleOffset-->
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>30</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.75</Flammability>
+			<Nutrition>0.12</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.15</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.3</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.016</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<!--equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel-->
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.005</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<!--li>
+				<compClass>CompEquippable</compClass>
+			</li-->
+		</comps>
+		<!--weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<tools>
+			<li>
+			<label>bottle</label>
+			<capacities>
+			<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+			<label>neck</label>
+			<capacities>
+			<li>Poke</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+		</tools-->
+		<allowedArchonexusCount>50</allowedArchonexusCount>
+	</ThingDef>	
+	
+	<!-- Recipe -->
+	<RecipeDef>
+		<defName>kotor_juma_recipe</defName>
+		<label>make juma juice</label>
+		<description>Make an juma juice.</description>
+		<jobString>Making juma juice.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Wort</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Wort</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<kotor_Juma>1</kotor_Juma>
+		</products>
+		<researchPrerequisite>KOTOR_Research_Alcohol</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>		
+
+	<!--  Ardees ================================================================ -->
+	<ThingDef ParentName="DrugBase">
+		<defName>kotor_Ardees</defName>
+		<label>Ardees</label>
+		<description>Ardees, also known as Jawa Juice, was a beverage that originated on Tatooine and was made of Bantha hides mashed with fermented grains.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AlcoholHigh</HediffDef>
+			<HediffDef>AlcoholTolerance</HediffDef>
+			<HediffDef>Hangover</HediffDef>
+			<HediffDef>AlcoholAddiction</HediffDef>
+			<HediffDef>Cirrhosis</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+		</descriptionHyperlinks>
+		<possessionCount>6</possessionCount>
+		<graphicData>
+			<texPath>consumables/drugs_alchohol/jawa</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<!--equippedAngleOffset>-150</equippedAngleOffset-->
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>50</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.75</Flammability>
+			<Nutrition>0.12</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.25</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.1</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholTolerance</hediffDef>
+					<severity>0.016</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<!--equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel-->
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0.005</addictiveness>
+				<minToleranceToAddict>0.25</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>10</listOrder>
+			</li>
+			<!--li>
+				<compClass>CompEquippable</compClass>
+			</li-->
+		</comps>
+		<!--weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<tools>
+			<li>
+			<label>bottle</label>
+			<capacities>
+			<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+			<label>neck</label>
+			<capacities>
+			<li>Poke</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>2</cooldownTime>
+			</li>
+		</tools-->
+		<allowedArchonexusCount>50</allowedArchonexusCount>
+	</ThingDef>	
+	
+	<!-- Recipe -->
+	<RecipeDef>
+		<defName>kotor_Ardees_recipe</defName>
+		<label>make ardees</label>
+		<description>Make an ardees.</description>
+		<jobString>Making ardees.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Wort</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>kotor_leather_bantha</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Wort</li>
+				<li>kotor_leather_bantha</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<kotor_Ardees>5</kotor_Ardees>
+		</products>
+		<researchPrerequisite>KOTOR_Research_Alcohol</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>7</Cooking>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>		
+
+	<!--  deathstick ================================================================ -->	
+	<ThingDef ParentName="DrugBase">
+		<defName>kotor_deathstick</defName>
+		<label>Deathstick</label>
+		<description>Deathstick was a highly addictive illicit substance readily found in the underworld of Coruscant and other locales across the galaxy. Delivered inside luminescent sticks, they were a favorite among desperate addicts and thrill-seekers. Deathsticks were created from distilled and refined ixetal cilona, made from the balo mushrooms found on the planet Balosar.</description>
+		<descriptionHyperlinks>
+			<HediffDef>deathstickHigh</HediffDef>
+			<HediffDef>guy762_drugtolerance_spice</HediffDef>
+			<HediffDef>guy762_addiction_deathstick</HediffDef>
+			<HediffDef>ChemicalDamageSevere</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>consumables/drugs_alchohol/deathstick</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>350</WorkToMake>
+			<MarketValue>50</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Spacer</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<stackLimit>25</stackLimit>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>1.0</joy>
+			<baseIngestTicks>150</baseIngestTicks>
+			<drugCategory>Social</drugCategory>
+			  <ingestSound>Ingest_Smoke</ingestSound>
+			  <ingestEffect>Smoke_Joint</ingestEffect>
+			  <ingestHoldOffsetStanding>
+				<northDefault>
+				  <offset>(0.27,0,0.08)</offset>
+				  <behind>true</behind>
+				</northDefault>
+				<east>
+				  <offset>(0.45,0,0.08)</offset>
+				</east>
+				<south>
+				  <offset>(0.27,0,0.08)</offset>
+				</south>
+				<west>
+				  <offset>(-0.50,0,0.08)</offset>
+				  <flip>true</flip>
+				</west>
+			  </ingestHoldOffsetStanding>
+			  <ingestHoldUsesTable>false</ingestHoldUsesTable>
+			  <ingestCommandString>Smoke {0}</ingestCommandString>
+			  <ingestReportString>Smoking {0}.</ingestReportString>
+			  <ingestReportStringEat>Consuming {0}.</ingestReportStringEat>
+			  <useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>deathstickHigh</hediffDef>
+					<severity>0.75</severity>
+					<toleranceChemical>guy762_chemical_spice</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>guy762_drugtolerance_spice</hediffDef>
+					<severity>0.06</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>guy762_chemical_spice</chemical>
+				<addictiveness>0.1</addictiveness>
+				<existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>0.40~0.60</overdoseSeverityOffset>
+				<largeOverdoseChance>0.08</largeOverdoseChance>
+			</li>
+		</comps>
+		<allowedArchonexusCount>200</allowedArchonexusCount>
+		<tradeTags>
+		  <li>guy762TT_KotORDrugs</li>
+		  <li>guy762TT_Spice</li>
+		</tradeTags>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>deathstickHigh</defName>
+		<label>high on deathstick</label>
+		<labelNoun>a deathstick high</labelNoun>
+		<description>Active deathstick in the bloodstream. Generates an intense euphoric high.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0.8,0)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.0</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+					  <capacity>Consciousness</capacity>
+					  <offset>-0.5</offset>
+					</li>
+					<li>
+					  <capacity>Sight</capacity>
+					  <offset>-0.4</offset>
+					</li>
+					<li>
+					  <capacity>Moving</capacity>
+					  <offset>-0.3</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PsychicSensitivity>-0.8</PsychicSensitivity>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+					  <hediff>HeartAttack</hediff>
+					  <mtbDays>120</mtbDays>
+					  <partsToAffect>
+						<li>Heart</li>
+					  </partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>deathstickHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>deathstickHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>high on Deathstick</label>
+				<description>I'm tweaking so hard... I think I just saw Yoda coming through the floor...</description>
+				<baseMoodEffect>50</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<HediffDef ParentName="AddictionBase">
+    <defName>guy762_addiction_deathstick</defName>
+    <label>Deathstick addiction</label>
+    <description>A chemical addiction to Deathsticks. Long-term presence of Deathsticks has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of Deathsticks, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>guy762_chemneed_spice</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.001</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+		<socialFightChanceFactor>2.0</socialFightChanceFactor>
+		<painFactor>2</painFactor>
+		<statOffsets>
+          <RestFallRateFactor>0.1</RestFallRateFactor>
+        </statOffsets>
+		<capMods>
+			<li>
+			  <capacity>Consciousness</capacity>
+			  <offset>-0.6</offset>
+			</li>
+			<li>
+			  <capacity>Sight</capacity>
+			  <offset>-0.5</offset>
+			</li>
+			<li>
+			  <capacity>Moving</capacity>
+			  <offset>-0.4</offset>
+			</li>
+			<li>
+				<capacity>BloodPumping</capacity>
+				<offset>-0.2</offset>
+			</li>
+		</capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>guy762_withdrawlthought_deathstick</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>guy762_addiction_deathstick</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Deathstick withdrawal</label>
+        <description>My brain hurts... monsters are lurking in the corner of my vision... I can't think...I'm so afraid...</description>
+        <baseMoodEffect>-45</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+
+	<!-- Recipe -->
+	<RecipeDef>
+		<defName>kotor_deathstick_recipe</defName>
+		<label>make 10 Deathsticks</label>
+		<description>Make 10 Deathstick vials.</description>
+		<jobString>Making 10 deathsticks.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>kotor_spice</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawFungus</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>kotor_spice</li>
+				<li>RawFungus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<kotor_deathstick>10</kotor_deathstick>
+		</products>
+		<researchPrerequisite>KOTOR_Research_Spice</researchPrerequisite>
+		<skillRequirements>
+			<Cooking>10</Cooking>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_DrugLab</li>
+		</recipeUsers>
+	</RecipeDef>
+</Defs>

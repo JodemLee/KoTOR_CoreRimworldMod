@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="guy762_munitionbase" ParentName="ResourceBase" Abstract="True">
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>guy762_weaponmod</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<tradeability>All</tradeability>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_munitionbase">
+		<defName>guy762_RocketItem_highex</defName>
+		<label>high-explosive missile</label>
+		<description>This deadly anti-personnel missile detonates a secondary charge on impact, showering the target and those around it with shrapnel.</description>
+		<graphicData>
+		  <texPath>Items/Rockets/rocket_ex</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		  <Mass>4</Mass>
+		</statBases>
+		<stackLimit>25</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_LightMunitions</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>guy762_GrenadeDamage_frag</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="guy762_munitionbase">
+		<defName>guy762_RocketItem_plasma</defName>
+		<label>plasma missile</label>
+		<description>Plasma missiles explode in a roiling ball of super-heated gas on impact. This generally has a markedly bad effect on the target and anything in its immediate area.</description>
+		<graphicData>
+		  <texPath>Items/Rockets/rocket_plasma</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>200</MarketValue>
+		  <Mass>4</Mass>
+		</statBases>
+		<stackLimit>25</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_LightMunitions</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4</explosiveRadius>
+				<explosiveDamageType>guy762_GrenadeDamage_plasma</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="guy762_munitionbase">
+		<defName>guy762_RocketItem_ion</defName>
+		<label>ion missile</label>
+		<description>These missiles emit a burst of energy on impact, severely damaging any droids or personal shields in the area of effect.</description>
+		<graphicData>
+		  <texPath>Items/Rockets/rocket_ion</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>600</MarketValue>
+		  <Mass>4</Mass>
+		</statBases>
+		<stackLimit>25</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_LightMunitions</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>1.5</explosiveRadius>
+				<explosiveDamageType>guy762_GrenadeDamage_ion</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="guy762_munitionbase">
+		<defName>guy762_RocketItem_buster</defName>
+		<label>buster missile</label>
+		<description>This missile is designed for use against vehicles and heavy droids.</description>
+		<graphicData>
+		  <texPath>Items/Rockets/rocket_buster</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>1000</MarketValue>
+		  <Mass>4</Mass>
+		</statBases>
+		<stackLimit>25</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_LightMunitions</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>guy762_GrenadeDamage_frag</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+	</ThingDef>
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</Defs>

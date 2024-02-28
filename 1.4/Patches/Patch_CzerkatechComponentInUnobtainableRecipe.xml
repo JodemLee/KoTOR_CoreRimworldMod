@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[@Name="KotORArmorModdable_soft"]/costList</xpath>
+	  <value>
+		<costList>
+			<kotor_czerkatechComponent>1</kotor_czerkatechComponent>
+		</costList>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[@Name="KotORArmorModdable_hard"]/costList</xpath>
+	  <value>
+		<costList>
+			<kotor_czerkatechComponent>1</kotor_czerkatechComponent>
+		</costList>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[@Name="KotORRangedModdable"]/costList</xpath>
+	  <value>
+		<costList>
+			<kotor_czerkatechComponent>1</kotor_czerkatechComponent>
+		</costList>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[@Name="KotORMeleeModdable"]/costList</xpath>
+	  <value>
+		<costList>
+			<kotor_czerkatechComponent>1</kotor_czerkatechComponent>
+		</costList>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[@Name="guy762_DroidTechUpgradeable"]/costList</xpath>
+	  <value>
+		<costList>
+			<kotor_czerkatechComponent>1</kotor_czerkatechComponent>
+		</costList>
+	  </value>
+	</Operation>
+
+
+	
+	
+
+</Patch>

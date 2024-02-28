@@ -3,6 +3,11 @@
 	<v1.4>
 		<li>/</li>
 		<li>1.4</li>
+		<li IfModNotActive="jecrell.jecstools">1.4/AdditionalMods/_BorrowedFromJecsTools</li>
+		<li IfModNotActive="Ogam.MedievalOverhaul.ArcaneArchaeologists">1.4/AdditionalMods/Taranchuk_colorTwo</li>
+		
+		<li IfModActive="Killathon.AndroidTiersReforged">1.4/AdditionalMods/legacy_ATR</li>
+		<li IfModActive="Killathon.MechanicalHumanlikesCore">1.4/AdditionalMods/MHC</li>
 		<li IfModActive="Killathon.MechHumanlikes.AndroidTiersCore">1.4/AdditionalMods/ATC</li>
 	</v1.4>
 </loadFolders>

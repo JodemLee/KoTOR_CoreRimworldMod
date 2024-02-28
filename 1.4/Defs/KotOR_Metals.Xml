@@ -105,6 +105,8 @@
 		<label>Cortosis</label>
 		<description>Cortosis is a metal that has a very high energy absorption rate and transmission coefficients, which allows even the energy of a blaster bolt to be dissipated upon contact. One of the strongest minerals in the galaxy, cortosis can even withstand the blow of a lightsaber.</description>
 		<graphicData>
+			<texPath>raw_resources/plasteel_blank</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 			<color>(54,41,66)</color>
 		</graphicData>
 		<statBases>
@@ -141,9 +143,9 @@
 	<!-- Recipe -->
 	<RecipeDef>
 		<defName>kotor_IngotCortosis_recipe</defName>
-		<label>smelt cortosis ingot</label>
-		<description>smelt a cortosis ingot.</description>
-		<jobString>Smelting a cortosis ingot.</jobString>
+		<label>smelt Cortosis ingot</label>
+		<description>smelt a Cortosis ingot.</description>
+		<jobString>Smelting a Cortosis ingot.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
@@ -259,9 +261,9 @@
 	<!-- Recipe -->
 	<RecipeDef>
 		<defName>kotor_IngotBeskar_recipe</defName>
-		<label>smelt beskar ingot</label>
-		<description>smelt a beskar ingot.</description>
-		<jobString>Smelting a beskar ingot.</jobString>
+		<label>smelt Beskar ingot</label>
+		<description>smelt a Beskar ingot.</description>
+		<jobString>Smelting a Beskar ingot.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
@@ -311,8 +313,8 @@
 	<RecipeDef>
 		<defName>kotor_Plasteel_recipe</defName>
 		<label>smelt plasteel</label>
-		<description>smelt 5 plasteel planks.</description>
-		<jobString>Smelting 5 plasteel planks.</jobString>
+		<description>smelt 5 plasteel sheets.</description>
+		<jobString>Smelting 5 plasteel sheets.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
@@ -615,7 +617,7 @@
 		</statBases>
 		<stuffProps>
 			<color>(220,175,80)</color>
-			<commonality>0.5</commonality>
+			<commonality>0.2</commonality>
 			<statFactors>
 				<MaxHitPoints>1</MaxHitPoints>
 				<Beauty>2</Beauty>

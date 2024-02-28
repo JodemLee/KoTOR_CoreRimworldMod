@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef Name="guy762_apparelbase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<selectable>True</selectable>
+		<pathCost>14</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<burnableByRecipe>true</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<tradeability>All</tradeability>
+	</ThingDef>
+
+	<ThingDef Name="guy762_apparelmakeable" ParentName="guy762_apparelbase" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<recipeUsers>
+				<li>guy762_KotORWorkbench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Jade</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_nocraftclothingbase" ParentName="guy762_apparelbase" Abstract="True">
+		<statBases>
+			<Mass>0.5</Mass>
+			<MaxHitPoints>100</MaxHitPoints>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<smeltable>false</smeltable>
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+	</ThingDef>
+	
+	
+	
+	<ThingDef Name="guy762_clothingbase" ParentName="guy762_apparelmakeable" Abstract="True">
+		<statBases>
+			<Mass>0.5</Mass>
+			<WorkToMake>5000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<recipeMaker>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_armorbase_soft" ParentName="guy762_apparelmakeable" Abstract="True">
+		<statBases>
+			<Mass>0.5</Mass>
+			<WorkToMake>2000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<!--StuffEffectMultiplierArmor>-0.1</StuffEffectMultiplierArmor>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<!--Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat-->
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<apparel>
+			<defaultOutfitTags Inherit="False">
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<recipeMaker>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="guy762_ModdableMakeableArmor_soft" ParentName="guy762_armorbase_soft" Abstract="True">
+		<equippedStatOffsets> <!--these are required for pawn stats to be affected by modifiers added via ModularPartDefs-->
+		  <MoveSpeed>0.000001</MoveSpeed>
+		  <SocialImpact>0.000001</SocialImpact>
+		  <PainShockThreshold>0.000001</PainShockThreshold>
+		  <MentalBreakThreshold>0.000001</MentalBreakThreshold>
+		  <PsychicSensitivity>0.000001</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.000001</PsychicEntropyRecoveryRate>
+		  <PsychicEntropyGain>0.000001</PsychicEntropyGain>
+		  <PsychicEntropyMax>0.000001</PsychicEntropyMax>
+		  <InjuryHealingFactor>0.000001</InjuryHealingFactor>
+		  <MeleeDodgeChance>0.000001</MeleeDodgeChance>
+		  <MeleeHitChance>0.000001</MeleeHitChance>
+		  <IncomingDamageFactor>0.000001</IncomingDamageFactor>
+		  <HuntingStealth>0.000001</HuntingStealth>
+		  <ToxicEnvironmentResistance>0.000001</ToxicEnvironmentResistance>
+		  <PawnTrapSpringChance>0.000001</PawnTrapSpringChance>
+		  <MortarMissRadiusFactor>0.000001</MortarMissRadiusFactor>
+		  <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.000001</HackingSpeed>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType>
+		<descriptionHyperlinks>
+			<ThingDef>guy762_KotORWorkbench</ThingDef>
+		</descriptionHyperlinks>
+	</ThingDef>
+	
+	<ThingDef Name="guy762_armorbase_hard" ParentName="guy762_apparelmakeable" Abstract="True">
+		<statBases>
+			<Mass>0.5</Mass>
+			<WorkToMake>5000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<!--StuffEffectMultiplierArmor>-0.1</StuffEffectMultiplierArmor>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<!--Insulation_Cold>5</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat-->
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<apparel>
+			<defaultOutfitTags Inherit="False">
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<recipeMaker>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="guy762_ModdableMakeableArmor_hard" ParentName="guy762_armorbase_hard" Abstract="True">
+		<equippedStatOffsets> <!--these are required for pawn stats to be affected by modifiers added via ModularPartDefs-->
+		  <MoveSpeed>0.000001</MoveSpeed>
+		  <SocialImpact>0.000001</SocialImpact>
+		  <PainShockThreshold>0.000001</PainShockThreshold>
+		  <MentalBreakThreshold>0.000001</MentalBreakThreshold>
+		  <PsychicSensitivity>0.000001</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.000001</PsychicEntropyRecoveryRate>
+		  <PsychicEntropyGain>0.000001</PsychicEntropyGain>
+		  <PsychicEntropyMax>0.000001</PsychicEntropyMax>
+		  <InjuryHealingFactor>0.000001</InjuryHealingFactor>
+		  <MeleeDodgeChance>0.000001</MeleeDodgeChance>
+		  <MeleeHitChance>0.000001</MeleeHitChance>
+		  <IncomingDamageFactor>0.000001</IncomingDamageFactor>
+		  <HuntingStealth>0.000001</HuntingStealth>
+		  <ToxicEnvironmentResistance>0.000001</ToxicEnvironmentResistance>
+		  <PawnTrapSpringChance>0.000001</PawnTrapSpringChance>
+		  <MortarMissRadiusFactor>0.000001</MortarMissRadiusFactor>
+		  <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.000001</HackingSpeed>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType>
+		<descriptionHyperlinks>
+			<ThingDef>guy762_KotORWorkbench</ThingDef>
+		</descriptionHyperlinks>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="KotORArmorModdable_soft" Abstract="True" ParentName="guy762_apparelbase">
+		<recipeMaker>
+		  <soundWorking>kotorsound_upgrade</soundWorking>
+		  <recipeUsers>
+			<li>guy762_KotORWorkbench</li>
+		  </recipeUsers>
+		  <researchPrerequisite>guy762_ResearchKotOR_uncraftable</researchPrerequisite>
+		</recipeMaker>
+		<smeltable>false</smeltable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+		    <WorkToMake>100</WorkToMake>
+		    <!--StuffEffectMultiplierArmor>-0.1</StuffEffectMultiplierArmor>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+		</statBases>
+		<costList>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+		<descriptionHyperlinks>
+			<ThingDef>guy762_KotORWorkbench</ThingDef>
+		</descriptionHyperlinks>
+		<apparel>
+			<defaultOutfitTags Inherit="False">
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<equippedStatOffsets> <!--these are required for pawn stats to be affected by modifiers added via ModularPartDefs-->
+		  <MoveSpeed>0.000001</MoveSpeed>
+		  <SocialImpact>0.000001</SocialImpact>
+		  <PainShockThreshold>0.000001</PainShockThreshold>
+		  <MentalBreakThreshold>0.000001</MentalBreakThreshold>
+		  <PsychicSensitivity>0.000001</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.000001</PsychicEntropyRecoveryRate>
+		  <PsychicEntropyGain>0.000001</PsychicEntropyGain>
+		  <PsychicEntropyMax>0.000001</PsychicEntropyMax>
+		  <InjuryHealingFactor>0.000001</InjuryHealingFactor>
+		  <MeleeDodgeChance>0.000001</MeleeDodgeChance>
+		  <MeleeHitChance>0.000001</MeleeHitChance>
+		  <IncomingDamageFactor>0.000001</IncomingDamageFactor>
+		  <HuntingStealth>0.000001</HuntingStealth>
+		  <ToxicEnvironmentResistance>0.000001</ToxicEnvironmentResistance>
+		  <PawnTrapSpringChance>0.000001</PawnTrapSpringChance>
+		  <MortarMissRadiusFactor>0.000001</MortarMissRadiusFactor>
+		  <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.000001</HackingSpeed>
+		</equippedStatOffsets>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+	  </ThingDef>
+	  
+	  <ThingDef Name="KotORArmorModdable_hard" Abstract="True" ParentName="guy762_apparelbase">
+		<recipeMaker>
+		  <soundWorking>kotorsound_upgrade</soundWorking>
+		  <recipeUsers>
+			<li>guy762_KotORWorkbench</li>
+		  </recipeUsers>
+		  <researchPrerequisite>guy762_ResearchKotOR_uncraftable</researchPrerequisite>
+		</recipeMaker>
+		<smeltable>false</smeltable>
+		<tickerType>Normal</tickerType>
+		<statBases>
+		    <WorkToMake>100</WorkToMake>
+		    <!--StuffEffectMultiplierArmor>-0.1</StuffEffectMultiplierArmor>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<Insulation_Cold>5</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+		</statBases>
+		<costList>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+		<descriptionHyperlinks>
+			<ThingDef>guy762_KotORWorkbench</ThingDef>
+		</descriptionHyperlinks>
+		<apparel>
+			<defaultOutfitTags Inherit="False">
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<careIfWornByCorpse>true</careIfWornByCorpse>
+			<careIfDamaged>true</careIfDamaged>
+		</apparel>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<equippedStatOffsets> <!--these are required for pawn stats to be affected by modifiers added via ModularPartDefs-->
+		  <MoveSpeed>0.000001</MoveSpeed>
+		  <SocialImpact>0.000001</SocialImpact>
+		  <PainShockThreshold>0.000001</PainShockThreshold>
+		  <MentalBreakThreshold>0.000001</MentalBreakThreshold>
+		  <PsychicSensitivity>0.000001</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.000001</PsychicEntropyRecoveryRate>
+		  <PsychicEntropyGain>0.000001</PsychicEntropyGain>
+		  <PsychicEntropyMax>0.000001</PsychicEntropyMax>
+		  <InjuryHealingFactor>0.000001</InjuryHealingFactor>
+		  <MeleeDodgeChance>0.000001</MeleeDodgeChance>
+		  <MeleeHitChance>0.000001</MeleeHitChance>
+		  <IncomingDamageFactor>0.000001</IncomingDamageFactor>
+		  <HuntingStealth>0.000001</HuntingStealth>
+		  <ToxicEnvironmentResistance>0.000001</ToxicEnvironmentResistance>
+		  <PawnTrapSpringChance>0.000001</PawnTrapSpringChance>
+		  <MortarMissRadiusFactor>0.000001</MortarMissRadiusFactor>
+		  <HackingSpeed MayRequire="Ludeon.RimWorld.Ideology">0.000001</HackingSpeed>
+		</equippedStatOffsets>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+	  </ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_HeadbandBase" ParentName="guy762_apparelbase" Abstract="True">
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+		<smeltable>false</smeltable>
+	  </ThingDef>
+	  
+	  <ThingDef Name="guy762_HatCraftableBase" ParentName="guy762_armorbase_soft" Abstract="True">
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+	  </ThingDef>
+	  
+	  <ThingDef Name="guy762_HatModdableBase" ParentName="KotORArmorModdable_soft" Abstract="True">
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+	  </ThingDef>
+	  
+	  <ThingDef Name="guy762_HatNoCraftBase" ParentName="guy762_nocraftclothingbase" Abstract="True">
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+		<apparel Inherit="False" />
+	  </ThingDef>
+	  
+	  <ThingDef Name="guy762_HelmetCraftableBase" ParentName="guy762_armorbase_hard" Abstract="True">
+		<thingCategories>
+		  <li>Headgear</li>
+		</thingCategories>
+	  </ThingDef>
+	
+
+	
+	
+
+</Defs>

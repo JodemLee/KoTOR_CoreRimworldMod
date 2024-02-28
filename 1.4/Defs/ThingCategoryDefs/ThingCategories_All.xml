@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>guy762_weaponmod</defName>
+		<label>equipment upgrades</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>guy762_blasters</defName>
+      <label>blasters</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+      <defName>guy762_vibroweapons</defName>
+      <label>vibroweapons</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef>
+
+	<ThingCategoryDef>
+      <defName>guy762_lightsaber</defName>
+      <label>lightsabers</label>
+      <parent>Weapons</parent>
+	</ThingCategoryDef>
+
+</Defs>

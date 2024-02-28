@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_vibroweapons</defName>
+    <label>vibration weaponry</label>
+    <description>Build bladed weapons that contain a vibration core, giving them extra cutting potential.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>18.00</researchViewX>
+    <researchViewY>7.5</researchViewY>
+  </ResearchProjectDef>
+  
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_blasters</defName>
+    <label>blaster weaponry</label>
+    <description>Build weapons which fire bolts of particle-beam energy.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>ChargedShot</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>18.00</researchViewX>
+    <researchViewY>7.6</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_hvyblasters</defName>
+    <label>heavy blaster weaponry</label>
+    <description>Build weapons which fire heavier bolts of particle-beam energy.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_blasters</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>19.00</researchViewX>
+    <researchViewY>7.4</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_ion</defName>
+    <label>ion weaponry</label>
+    <description>Build weapons which fire bolts of ionized energy, capable of disrupting the electronic systems of Droids and Mechanoids.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_blasters</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>19.00</researchViewX>
+    <researchViewY>7.5</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_sonic</defName>
+    <label>sonic weaponry</label>
+    <description>Build weapons which fire waves of highly-focused sonic energy, capable of disorienting living targets and dealing severe damage to buildings and structures.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_blasters</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>19.00</researchViewX>
+    <researchViewY>7.7</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_disruptor</defName>
+    <label>disruptor weaponry</label>
+    <description>Build weapons which fire bolts of disruptive energy, reducing solid matter to its constituent molecules. Weapons of this variety ignore armor and many forms of personal shielding.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_blasters</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>19.00</researchViewX>
+    <researchViewY>7.8</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_bowcaster</defName>
+    <label>Bowcasters</label>
+    <description>Build traditional Wookiee Bowcasters, which hurl explosive energy quarrels at their targets.</description>
+    <baseCost>7000</baseCost>
+    <techLevel>Spacer</techLevel>
+	<heldByFactionCategoryTags>
+      <li>Outlander</li>
+    </heldByFactionCategoryTags>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_hvyblasters</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+	<techprintCount>1</techprintCount>
+	<techprintCommonality>0.5</techprintCommonality>
+    <researchViewX>20.00</researchViewX>
+    <researchViewY>7.4</researchViewY>
+  </ResearchProjectDef>
+  
+  
+  
+  
+  
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_workbench</defName>
+    <label>basic upgrading</label>
+    <description>Build Aratech workbenches, capable upgrading many different types of non-standard blasters, vibroweapons, and Lightsabers found throughout the galaxy.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_blasters</li>
+	  <li>guy762_ResearchKotOR_vibroweapons</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>19.00</researchViewX>
+    <researchViewY>7.6</researchViewY>
+    <discoveredLetterTitle>About: Upgrading weapons at the workbench</discoveredLetterTitle>
+    <discoveredLetterText>You now have the technology to build an Aratech workbench, allowing you to upgrade many higher-level blasters, vibroweapons, and even Lightsabers - provided you have also found the required upgrade item.\n\nNot all weapons can be upgraded; the fabrication patterns of common, base-level blasters and vibroweapons that you are capable of manufacturing in your own facilities are streamlined and simplistic, and modifying them in any meaningful capacity cannot reasonably be done. Weapons of more modular design found throughout the galaxy require highly advanced fabrication technology to manufacture, the specifics of which are closely-guarded corporate secrets. Weapons of this kind must be found - either bought from a trader, or looted from your enemies.\n\nSimilarly, upgrade items must also first be found or bought before they can be installed. Once installed, an upgrade cannot be salvaged, only replaced or removed. Ensure you are installing your upgrade on the weapon you want it on before completing the UI!</discoveredLetterText>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_advupgrade</defName>
+    <label>advanced upgrading</label>
+    <description>Build basic weapon upgrades, and install more advanced upgrades such as major overhaul kits.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_workbench</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>20.00</researchViewX>
+    <researchViewY>7.7</researchViewY>
+  </ResearchProjectDef>
+  
+  
+  
+  <!--ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_lightsabers</defName>
+    <label>Lightsabers</label>
+    <description>Build the weapon of a Jedi Knight; the Lightsaber.</description>
+    <baseCost>10000</baseCost>
+    <techLevel>Ultra</techLevel>
+	<heldByFactionCategoryTags>
+      <li>Empire</li>
+    </heldByFactionCategoryTags>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_workbench</li>
+    </prerequisites>
+	<techprintCount>4</techprintCount>
+	<techprintCommonality>0.25</techprintCommonality>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>20.00</researchViewX>
+    <researchViewY>7.6</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_dualsabers</defName>
+    <label>Lightsaber miniaturization</label>
+    <description>Build double-bladed and short Lightsabers.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>guy762_ResearchKotOR_lightsabers</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>21.00</researchViewX>
+    <researchViewY>7.6</researchViewY>
+  </ResearchProjectDef-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <ResearchProjectDef>
+    <defName>guy762_ResearchKotOR_uncraftable</defName>
+    <label>uncraftable weapons</label>
+    <description>Hey! You're not supposed to unlock this one!</description>
+    <baseCost>99999999</baseCost>
+    <techLevel>Ultra</techLevel>
+    <heldByFactionCategoryTags>
+      <li>Ancient</li>
+    </heldByFactionCategoryTags>
+	<techprintCount>999</techprintCount>
+    <techprintCommonality>0</techprintCommonality>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>21.00</researchViewX>
+    <researchViewY>7.6</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

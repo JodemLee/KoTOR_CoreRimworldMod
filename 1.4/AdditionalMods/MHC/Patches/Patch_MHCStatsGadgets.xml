@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="guy762_glove_automation"]/equippedStatOffsets</xpath>
+	  <order>Append</order>
+	  <value>
+		<MHC_MechanicalSurgerySuccessChance>0.2</MHC_MechanicalSurgerySuccessChance>
+		<MHC_MechanicalTendQualityOffset>0.2</MHC_MechanicalTendQualityOffset>
+		<MHC_MechanicalTendSpeed>0.2</MHC_MechanicalTendSpeed>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="guy762_glove_automation_adv"]/equippedStatOffsets</xpath>
+	  <order>Append</order>
+	  <value>
+		<MHC_MechanicalSurgerySuccessChanceFactor>0.4</MHC_MechanicalSurgerySuccessChanceFactor>
+		<MHC_MechanicalTendQualityOffset>0.4</MHC_MechanicalTendQualityOffset>
+		<MHC_MechanicalTendSpeed>0.4</MHC_MechanicalTendSpeed>
+	  </value>
+	</Operation>
+	
+	
+	
+	
+	
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="guy762_belt_czerka"]/equippedStatOffsets</xpath>
+	  <order>Append</order>
+	  <value>
+		<MHC_MechanicalSurgerySuccessChance>0.2</MHC_MechanicalSurgerySuccessChance>
+		<MHC_MechanicalTendQualityOffset>0.2</MHC_MechanicalTendQualityOffset>
+		<MHC_MechanicalTendSpeed>0.2</MHC_MechanicalTendSpeed>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="guy762_belt_exchange"]/equippedStatOffsets</xpath>
+	  <order>Append</order>
+	  <value>
+		<MHC_MechanicalSurgerySuccessChance>0.3</MHC_MechanicalSurgerySuccessChance>
+		<MHC_MechanicalTendQualityOffset>0.3</MHC_MechanicalTendQualityOffset>
+		<MHC_MechanicalTendSpeed>0.3</MHC_MechanicalTendSpeed>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[defName="guy762_belt_calrissian"]/equippedStatOffsets</xpath>
+	  <order>Append</order>
+	  <value>
+		<MHC_MechanicalSurgerySuccessChance>0.5</MHC_MechanicalSurgerySuccessChance>
+		<MHC_MechanicalTendQualityOffset>0.5</MHC_MechanicalTendQualityOffset>
+		<MHC_MechanicalTendSpeed>0.5</MHC_MechanicalTendSpeed>
+	  </value>
+	</Operation>
+	
+	
+	
+
+
+</Patch>

@@ -1,20 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	
-	<DamageDef ParentName="Bullet">
-		<defName>guy762_PoisonDamage_saber</defName>
-		<label>Saber poison</label>
-		<workerClass>guy762_Ionization.DamageWorker_Organics</workerClass>
-		<modExtensions>
-			<li Class="guy762_Ionization.ModExtension_HediffGiver">
-				<hediffToAdd>guy762_Poison_saber</hediffToAdd>
-				<hediffResistanceStat>ToxicResistance</hediffResistanceStat>
-				<severityFixed>0.3</severityFixed>
-			</li>
-		</modExtensions>
-		<impactSoundType>Bullet</impactSoundType>
-	  </DamageDef>
+
 
   <HediffDef>
     <defName>guy762_Poison_saber</defName>

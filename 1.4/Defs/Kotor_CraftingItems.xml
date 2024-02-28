@@ -187,4 +187,97 @@
 		<techLevel>Ultra</techLevel>
 	</ThingDef>
 
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_Duracrete</defName>
+		<label>Duracrete</label>
+		<description>Steel infused with concrete. Ugly, but tougher than any natural stone type. A required material in building codes across the galaxy.</description>
+		<graphicData>
+		  <texPath>raw_resources/uranium_blank</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <color>(170,160,170)</color>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+		  <MarketValue>2</MarketValue>
+		  <Mass>2</Mass>
+		  <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+		  <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+		  <Beauty>-12</Beauty>
+		  <ConstructionSpeedFactor>0.8</ConstructionSpeedFactor>
+		</statBases>
+		<thingCategories>
+		  <li>StoneBlocks</li>
+		</thingCategories>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>false</smeltable>
+		<stuffProps>
+		  <categories>
+			<li>Stony</li>
+		  </categories>
+		  <commonality>0.40</commonality>
+		  <appearance>Metal</appearance>
+		  <color>(170,160,170)</color>
+		  <constructEffect>ConstructMetal</constructEffect>
+		  <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+		  <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+		  <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+		  <stuffAdjective>Duracrete</stuffAdjective>
+		  <statOffsets>
+			<Beauty>-4</Beauty>
+		  </statOffsets>
+		  <statFactors>
+			<MaxHitPoints>2.5</MaxHitPoints>
+			<WorkToMake>1.6</WorkToMake>
+			<WorkToBuild>6.0</WorkToBuild>
+			<Flammability>0</Flammability>
+			<DoorOpenSpeed>0.40</DoorOpenSpeed>
+			<BedRestEffectiveness>0.9</BedRestEffectiveness>
+			<MeleeWeapon_CooldownMultiplier>1.40</MeleeWeapon_CooldownMultiplier>
+		  </statFactors>
+		</stuffProps>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	  </ThingDef>
+	  
+	  <RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>KotORRecipe_Duracrete</defName>
+		<label>make Duracrete</label>
+		<description>Cut and infuse rock chunks into Duracrete.</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<ingredients>
+		  <li>
+			<filter>
+			  <categories>
+				<li>StoneChunks</li>
+			  </categories>
+			</filter>
+			<count>1</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <categories>
+			<li>StoneChunks</li>
+		  </categories>
+		  <thingDefs>
+			<li>Steel</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <KOTOR_Duracrete>20</KOTOR_Duracrete>
+		</products>
+	  </RecipeDef>
+
 </Defs>

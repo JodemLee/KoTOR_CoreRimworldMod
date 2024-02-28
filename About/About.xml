@@ -14,11 +14,6 @@
 	
 	<!-- Requirements ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<modDependencies>
-    <li>
-        <packageId>ludeon.rimworld.ideology</packageId>
-        <displayName>Rimworld: Ideology</displayName>
-        <steamWorkshopUrl>https://store.steampowered.com/app/1392840/RimWorld__Ideology/</steamWorkshopUrl>
-    </li>
 	<li>
 		<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
 		<displayName>Vanilla Expanded Framework</displayName>

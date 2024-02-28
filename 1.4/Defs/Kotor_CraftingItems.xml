@@ -278,6 +278,12 @@
 		<products>
 		  <KOTOR_Duracrete>20</KOTOR_Duracrete>
 		</products>
+		<recipeUsers>
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
 	  </RecipeDef>
 
 </Defs>

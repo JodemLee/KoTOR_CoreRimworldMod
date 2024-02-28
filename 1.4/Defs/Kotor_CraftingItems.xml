@@ -191,7 +191,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>KOTOR_Duracrete</defName>
 		<label>Duracrete</label>
-		<description>Steel infused with concrete. Ugly, but tougher than any natural stone type. A required material in building codes across the galaxy.</description>
+		<description>Steel infused with concrete. Ugly, but tougher than any natural stone type. Required by building codes across the galaxy.</description>
 		<graphicData>
 		  <texPath>raw_resources/uranium_blank</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>

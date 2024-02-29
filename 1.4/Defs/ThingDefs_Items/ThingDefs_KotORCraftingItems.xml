@@ -147,6 +147,7 @@
 		<graphicData>
 		  <texPath>crafting_items/armorweave</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>1.35</drawSize>
 		</graphicData>
 		<statBases>
 		  <MaxHitPoints>175</MaxHitPoints>

@@ -197,9 +197,9 @@
 		<ingredients>
 		  <li>
 			<filter>
-			  <categories>
+			  <thingDefs>
 				<li>Synthread</li>
-			  </categories>
+			  </thingDefs>
 			</filter>
 			<count>60</count>
 		  </li>

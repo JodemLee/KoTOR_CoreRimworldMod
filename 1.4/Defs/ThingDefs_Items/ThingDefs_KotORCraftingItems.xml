@@ -99,6 +99,39 @@
 			<li>FabricationBench</li>
 		</recipeUsers>
 	</RecipeDef>
+	
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>guy762_crystalitem_stygium</defName>
+		<label>Crystal, Stygium</label>
+		<description>The stygium mineral can be used to create cloaking effects that foil enemy sensors. In its pure crystal form, it is suitable for a lightsaber.</description>
+		<graphicData>
+		  <texPath>raw_resources/stygium</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<statBases>
+		  <MarketValue>2980</MarketValue>
+		  <Mass>0.2</Mass>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<tradeTags>
+		  <li>guy762TT_sabermod_adv</li>
+		  <li>guy762TT_KotORRawMat_rare</li>
+		</tradeTags>
+		
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<useHitPoints>true</useHitPoints>
+		<thingCategories>
+		  <li>guy762_weaponmod</li>
+		</thingCategories>
+		<tradeability>All</tradeability>
+		<techLevel>Ultra</techLevel>
+	</ThingDef>
 
 
 
@@ -151,41 +184,65 @@
 		</tradeTags>
 	  </ThingDef>
 	  
+	  <RecipeDef>
+		<defName>KotORRecipe_Armorweave</defName>
+		<label>make Armorweave</label>
+		<description>Weave steel and other advanced materials into Synthread to create Armorweave.</description>
+		<jobString>Making Armorweave.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>4000</workAmount>
+		<ingredients>
+		  <li>
+			<filter>
+			  <categories>
+				<li>Synthread</li>
+			  </categories>
+			</filter>
+			<count>60</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>Synthread</li>
+			<li>Steel</li>
+			<li>ComponentIndustrial</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <KOTOR_FabricArmorweave>50</KOTOR_FabricArmorweave>
+		</products>
+		<recipeUsers>
+			<li>guy762_KotORWorkbench</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>12</Crafting>
+		</skillRequirements>
+	  </RecipeDef>
 	  
 	  
 	  
 	  
-	  <ThingDef ParentName="ResourceBase">
-		<defName>guy762_crystalitem_stygium</defName>
-		<label>Crystal, Stygium</label>
-		<description>The stygium mineral can be used to create cloaking effects that foil enemy sensors. In its pure crystal form, it is suitable for a lightsaber.</description>
-		<graphicData>
-		  <texPath>raw_resources/stygium</texPath>
-		  <graphicClass>Graphic_StackCount</graphicClass>
-		  <shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<statBases>
-		  <MarketValue>2980</MarketValue>
-		  <Mass>0.2</Mass>
-		  <MaxHitPoints>50</MaxHitPoints>
-		  <Flammability>0</Flammability>
-		</statBases>
-		<stackLimit>10</stackLimit>
-		<tradeTags>
-		  <li>guy762TT_sabermod_adv</li>
-		  <li>guy762TT_KotORRawMat_rare</li>
-		</tradeTags>
-		
-		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<soundInteract>ChunkRock_Drop</soundInteract>
-		<soundDrop>ChunkRock_Drop</soundDrop>
-		<useHitPoints>true</useHitPoints>
-		<thingCategories>
-		  <li>guy762_weaponmod</li>
-		</thingCategories>
-		<tradeability>All</tradeability>
-		<techLevel>Ultra</techLevel>
-	</ThingDef>
+	  
+	  
 	
 	
 	
@@ -245,13 +302,20 @@
 		</stuffProps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<tradeTags>
+		  <li>guy762TT_KotORRawMat_common</li>
+		</tradeTags>
 	  </ThingDef>
 	  
 	  <RecipeDef ParentName="MakeStoneBlocksBase">
 		<defName>KotORRecipe_Duracrete</defName>
 		<label>make Duracrete</label>
-		<description>Cut and infuse rock chunks into Duracrete.</description>
+		<description>Infuse rock chunks and steel into Duracrete.</description>
+		<jobString>Making Duracrete.</jobString>
 		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<workAmount>6000</workAmount>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
 		<ingredients>
 		  <li>
 			<filter>
@@ -281,7 +345,7 @@
 		<products>
 		  <KOTOR_Duracrete>20</KOTOR_Duracrete>
 		</products>
-		<recipeUsers>
+		<recipeUsers Inherit="False">
 			<li>kotor_PlasmaFurnace</li>
 		</recipeUsers>
 		<skillRequirements>

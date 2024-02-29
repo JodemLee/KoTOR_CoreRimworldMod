@@ -745,5 +745,47 @@
 		</comps-->
 	</ThingDef>
 	
+	<ThingDef Name="guy762_CraftableUtilityBeltBase" ParentName="ApparelNoQualityBase" Abstract="True">
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+		  <li>ApparelUtility</li>
+		</thingCategories>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<tradeNeverStack>false</tradeNeverStack>
+		<smeltable>false</smeltable>
+		<burnableByRecipe>false</burnableByRecipe>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<tradeability>All</tradeability>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			
+			<recipeUsers>
+				<li>guy762_KotORWorkbench</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Jade</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+			<useIngredientsForColor>false</useIngredientsForColor>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+	</ThingDef>
+	
 
 </Defs>

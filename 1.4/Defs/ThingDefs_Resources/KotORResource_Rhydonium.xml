@@ -52,7 +52,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>KOTOR_RawRhydonium</defName>
 		<label>unrefined Rhydonium</label>
-		<description>Rhydonium is a powdery, highly-explosive fuel substance found on worlds such as Peragus II and Malastare. Officially categorized as a "high-value volatile mote", Rhydonium is one of few substances capable of producing a fusion reaction necessary to power most intergalactic spacecraft, but must first be refined into a liquid state for safe transportation. While unrefined this fuel is highly unstable and is much too dangerous to use in transport and machinery, though has some applications in explosive weaponry.</description>
+		<description>Rhydonium is a powdery, highly-explosive fuel substance found on worlds such as Peragus II and Abafar. Officially categorized as a "high-value volatile mote", Rhydonium is one of few substances capable of producing a fusion reaction necessary to power most intergalactic spacecraft, but must first be refined into a liquid state for safe transportation. While unrefined this fuel is highly unstable and is much too dangerous to use in transport and machinery, though has some applications in explosive weaponry.</description>
 		<possessionCount>20</possessionCount>
 		<tickerType>Normal</tickerType>
 		<graphicData>

@@ -5,7 +5,7 @@
 	<!-- Ore -->
 	<ThingDef ParentName="KOTOR_Mineable">
 		<defName>KOTOR_MineableRhydonium</defName>
-		<label>Rhydonium Deposit</label>
+		<label>Rhydonium deposit</label>
 		<description>A highly-volatile deposit of Rhydonium fuel. Attacks from any explosives or blaster weapons will detonate this deposit resulting in a massive explosion, though it can safely be mined or destroyed using sonic weapons and specialized mining lasers.</description>
 		<graphicData>
 			<color>(60,60,50)</color>

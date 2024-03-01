@@ -412,7 +412,6 @@
 	</SoundDef>
 	
 	
-
 	<SoundDef>
 		<defName>kotorsound_select_JKmedkit</defName>	
 		<context>MapOnly</context>
@@ -428,11 +427,7 @@
 				<volumeRange>
 				<min>35</min>        
 				<max>35</max>
-				</volumeRange>  		
-				<pitchRange>
-					<min>0.8</min>				
-					<max>1.2</max>
-				</pitchRange>			
+				</volumeRange>  				
 				<sustainLoop>False</sustainLoop>
 			</li>
 		</subSounds>
@@ -453,11 +448,7 @@
 				<volumeRange>
 				<min>35</min>        
 				<max>35</max>
-				</volumeRange>  		
-				<pitchRange>
-					<min>0.8</min>				
-					<max>1.2</max>
-				</pitchRange>			
+				</volumeRange>  			
 				<sustainLoop>False</sustainLoop>
 			</li>
 		</subSounds>
@@ -487,6 +478,9 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	
+	
+	
 	
 	
 	

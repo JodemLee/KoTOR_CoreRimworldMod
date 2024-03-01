@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- Rhydonium, formerly Peragian Fuel ================================================================ -->
+	<!-- Ore -->
+	<ThingDef ParentName="KOTOR_Mineable">
+		<defName>KOTOR_MineableRhydonium</defName>
+		<label>Rhydonium Deposit</label>
+		<description>A highly-volatile deposit of Rhydonium fuel. Attacks from any explosives or blaster weapons will detonate this deposit resulting in a massive explosion, though it can safely be mined or destroyed using sonic weapons and specialized mining lasers.</description>
+		<graphicData>
+			<color>(60,60,50)</color>
+			<colorTwo>(255,150,0)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>2000</MaxHitPoints>
+		</statBases>
+		<building>
+			<mineableThing>KOTOR_RawRhydonium</mineableThing>
+			<mineableYield>20</mineableYield>
+			<mineableScatterCommonality>0.1</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~30</mineableScatterLumpSizeRange>
+		</building>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<startWickOnDamageTaken>
+					<li>guy762_RangedDamage_energy</li>
+				    <li>guy762_MeleeDamage_energy</li>
+				    <li>guy762_MeleeDamage_ecut</li>
+				    <li>guy762_MeleeDamage_estab</li>
+				    <li>guy762_ExplosiveDamage_energy</li>
+					<li>guy762_RangedDamage_ion</li>
+					<li>guy762_ExplosiveDamage_ion</li>
+					<li>guy762_MeleeDamage_ion</li>
+					<li>guy762_GrenadeDamage_ion</li>
+					<li>Flame</li>
+					<li>Burn</li>
+					<li>Bomb</li>
+					<li>BombSuper</li>
+					<li>guy762_GrenadeDamage_plasma</li>
+					<li>guy762_GrenadeDamage_thermaldet</li>
+				</startWickOnDamageTaken>
+				<requiredDamageTypeToExplode>guy762_RangedDamage_energy</requiredDamageTypeToExplode>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Unrefined Rhydonium ================================================================ -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_RawRhydonium</defName>
+		<label>unrefined Rhydonium</label>
+		<description>Rhydonium is a powdery, highly-explosive fuel substance found on worlds such as Peragus II and Malastare. Officially categorized as a "high-value volatile mote", Rhydonium is one of few substances capable of producing a fusion reaction necessary to power most intergalactic spacecraft, but must first be refined into a liquid state for safe transportation. While unrefined this fuel is highly unstable and is much too dangerous to use in transport and machinery, though has some applications in explosive weaponry.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>raw_resources/unrefined_fuel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<stackLimit>100</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<MarketValue>5.0</MarketValue>
+			<Mass>0.25</Mass>
+			<Flammability>10</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>70</deepCountPerPortion>
+		<deepLumpSizeRange>2~10</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>guy762_RangedDamage_energy</li>
+				    <li>guy762_MeleeDamage_energy</li>
+				    <li>guy762_MeleeDamage_ecut</li>
+				    <li>guy762_MeleeDamage_estab</li>
+				    <li>guy762_ExplosiveDamage_energy</li>
+					<li>guy762_RangedDamage_ion</li>
+					<li>guy762_ExplosiveDamage_ion</li>
+					<li>guy762_MeleeDamage_ion</li>
+					<li>guy762_GrenadeDamage_ion</li>
+					<li>Flame</li>
+					<li>Burn</li>
+					<li>Bomb</li>
+					<li>BombSuper</li>
+					<li>guy762_GrenadeDamage_plasma</li>
+					<li>guy762_GrenadeDamage_thermaldet</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>100</allowedArchonexusCount>
+	</ThingDef>
+	
+	<!-- Refined Rhydonium ================================================================ -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>KOTOR_Rhydonium</defName>
+		<label>Rhydonium</label>
+		<description>Rhydonium is one of few substances capable of producing a fusion reaction necessary to power most intergalactic spacecraft, under the right circumstances. In this refined, liquid form, Rhydonium is much safer to handle and store for long periods of time and can safely be used in starship reactors.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>raw_resources/fuel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<stackLimit>100</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>7.0</MarketValue>
+			<Mass>0.25</Mass>
+			<Flammability>10</Flammability>
+			<DeteriorationRate>0.75</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>5</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>Flame</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>100</allowedArchonexusCount>
+		<tradeTags>
+		  <li>guy762TT_KotORFuel_common</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!-- Recipe 10x -->
+	<RecipeDef>
+		<defName>KotORRecipe_Rhydonium</defName>
+		<label>Refine 10 Rhydonium</label>
+		<description>Refine 10 Rhydonium</description>
+		<jobString>Refining 10 Rhydonium</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>3500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawRhydonium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawRhydonium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_Rhydonium>10</KOTOR_Rhydonium>
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<workSkill>Intellectual</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_fuelrefinery</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	
+  
+</Defs>

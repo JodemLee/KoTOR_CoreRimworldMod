@@ -327,6 +327,7 @@
 		  <graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<soundInteract>kotorsound_select_JKmedkit</soundInteract>
+		<soundDrop>kotorsound_select_JKmedkit</soundDrop>
 		<techLevel>Spacer</techLevel>
 		<statBases>
 		  <MaxHitPoints>100</MaxHitPoints>
@@ -370,7 +371,7 @@
 	<!-- Hyper Stimulant Recipes -->
 	<RecipeDef>
 		<defName>KotORRecipe_stim_hypercon</defName>
-		<label>make hyper-adrenal stamina</label>
+		<label>make 10 hyper-adrenal stamina</label>
 		<description>make 10 hyper-adrenal stamina needles</description>
 		<jobString>Making 10 hyper-adrenal stamina.</jobString>
 		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
@@ -416,7 +417,7 @@
 	
 	<RecipeDef>
 		<defName>KotORRecipe_stim_hyperdex</defName>
-		<label>make hyper-adrenal alacrity</label>
+		<label>make 10 hyper-adrenal alacrity</label>
 		<description>make 10 hyper-adrenal alacrity needles</description>
 		<jobString>Making 10 hyper-adrenal alacrity.</jobString>
 		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
@@ -462,7 +463,7 @@
 	
 	<RecipeDef>
 		<defName>KotORRecipe_stim_hyperstr</defName>
-		<label>make hyper-adrenal strength</label>
+		<label>make 10 hyper-adrenal strength</label>
 		<description>make 10 hyper-adrenal strength needles</description>
 		<jobString>Making 10 hyper-adrenal strength.</jobString>
 		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
@@ -508,7 +509,7 @@
 	
 	<RecipeDef>
 		<defName>KotORRecipe_stim_hyperbattle</defName>
-		<label>make hyper-battle stimulants</label>
+		<label>make 10 hyper-battle stimulants</label>
 		<description>make 10 hyper-battle stimulant needles</description>
 		<jobString>Making 10 hyper-battle stimulants.</jobString>
 		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>

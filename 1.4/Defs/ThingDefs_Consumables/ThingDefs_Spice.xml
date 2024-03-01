@@ -316,6 +316,57 @@
 	
 	
 	
+	
+	<ThingDef ParentName="MedicineBase">
+		<defName>KOTOR_SpiceMedKit</defName>
+		<label>spacer Medkit</label>
+		<description>A common medical kit containing a variety of tools and spice-based medicinal drugs for tending wounds and illnesses. Unlike Kolto-based Medpacs, these are not instant-use and will require a trained medical professional and a relatively clean resting area to apply.</description>
+		<possessionCount>3</possessionCount>
+		<graphicData>
+		  <texPath>Items/Medkits</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>kotorsound_select_JKmedkit</soundInteract>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>40</MarketValue>
+		  <Mass>0.50</Mass>
+		  <Flammability>0.7</Flammability>
+		  <MedicalPotency>1.50</MedicalPotency>
+		  <MedicalQualityMax>1.25</MedicalQualityMax>
+		  <DeteriorationRate>1.5</DeteriorationRate>
+		  
+		  <WorkToMake>1400</WorkToMake>
+		</statBases>
+		<costList>
+		  <kotor_spice>3</kotor_spice>
+		  <Neutroamine>5</Neutroamine>
+		</costList>
+		<recipeMaker>
+		  <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		  <workSkill>Medicine</workSkill>
+		  <recipeUsers>
+			<li>kotor_DrugLab</li>
+		  </recipeUsers>
+		  <researchPrerequisite>KOTOR_Research_Spice</researchPrerequisite>
+		  <skillRequirements>
+			<Medicine>8</Medicine>
+		  </skillRequirements>
+		  <bulkRecipeCount>4</bulkRecipeCount>
+		</recipeMaker>
+		<allowedArchonexusCount>10</allowedArchonexusCount>
+		<tradeTags>
+		  <li>guy762TT_KotORMedicine</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
 	<!-- Hyper Stimulant Recipes -->
 	<RecipeDef>
 		<defName>KotORRecipe_stim_hypercon</defName>

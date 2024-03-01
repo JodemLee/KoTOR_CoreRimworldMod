@@ -150,7 +150,7 @@
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-		<workAmount>7500</workAmount>
+		<workAmount>6400</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -268,7 +268,7 @@
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-		<workAmount>10000</workAmount>
+		<workAmount>7500</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -312,14 +312,14 @@
 	
 	<RecipeDef>
 		<defName>kotor_Plasteel_recipe</defName>
-		<label>smelt plasteel</label>
-		<description>smelt 5 plasteel sheets.</description>
-		<jobString>Smelting 5 plasteel sheets.</jobString>
+		<label>smelt 5 Plasteel</label>
+		<description>smelt 5 Plasteel sheets.</description>
+		<jobString>Smelting 5 Plasteel sheets.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-		<workAmount>3500</workAmount>
+		<workAmount>3200</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -374,8 +374,8 @@
 	
 	<ThingDef ParentName="KOTOR_Mineable">
 		<defName>KOTOR_MineableDurasteel</defName>
-		<label>Compacted durasteel</label>
-		<description>Ancient compacted rubble rich in durasteel.</description>
+		<label>Compacted Durasteel</label>
+		<description>Ancient compacted rubble rich in Durasteel.</description>
 		<graphicData Inherit="False">
 			<texPath>raw_resources/compacted_metal</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -400,7 +400,7 @@
 	<ThingDef ParentName="KOTOR_Metal">
 		<defName>KOTOR_AlloyDurasteel</defName>
 		<label>Durasteel</label>
-		<description>The most common alloy in the galaxy, durasteel is used for everything from household appliances to military armor.</description>
+		<description>The most common alloy in the galaxy, Durasteel is used for everything from household appliances to military armor.</description>
 		<graphicData>
 			<color>(115,125,120)</color>
 		</graphicData>
@@ -438,7 +438,7 @@
 	<ThingDef ParentName="ChunkBase">
 		<defName>KotORChunk_durasteel</defName>
 		<label>Durasteel slag chunk</label>
-		<description>A chunk of durasteel slag. While it's useless in its current form, it can be smelted to recover durasteel.</description>
+		<description>A chunk of Durasteel slag. While it's useless in its current form, it can be smelted to recover Durasteel.</description>
 		<graphicData>
 		  <texPath>raw_resources/slag_blank</texPath>
 		  <graphicClass>Graphic_Random</graphicClass>
@@ -517,14 +517,14 @@
 	<!-- Recipe -->
 	<RecipeDef>
 		<defName>kotor_IngotDurasteel_recipe</defName>
-		<label>smelt durasteel ingots</label>
-		<description>smelt 5 durasteel ingots.</description>
-		<jobString>Smelting 5 durasteel ingots.</jobString>
+		<label>smelt 5 Durasteel</label>
+		<description>smelt 5 Durasteel ingots.</description>
+		<jobString>Smelting 5 Durasteel ingots.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
-		<workAmount>5000</workAmount>
+		<workAmount>2500</workAmount>
 		<ingredients>
 			<li>
 				<filter>

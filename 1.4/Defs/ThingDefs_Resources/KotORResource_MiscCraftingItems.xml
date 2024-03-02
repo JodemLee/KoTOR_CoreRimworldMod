@@ -382,5 +382,51 @@
 			<Crafting>6</Crafting>
 		</skillRequirements>
 	  </RecipeDef>
+	  
+	  <RecipeDef ParentName="MakeStoneBlocksBase">
+		<defName>KotORRecipe_5xDuracrete</defName>
+		<label>make 100 Duracrete</label>
+		<description>Infuse rock chunks and steel into Duracrete.</description>
+		<jobString>Making 100 Duracrete.</jobString>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<workAmount>15000</workAmount>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+		  <li>
+			<filter>
+			  <categories>
+				<li>StoneChunks</li>
+			  </categories>
+			</filter>
+			<count>5</count>
+		  </li>
+		  <li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>100</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <categories>
+			<li>StoneChunks</li>
+		  </categories>
+		  <thingDefs>
+			<li>Steel</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<products>
+		  <KOTOR_Duracrete>100</KOTOR_Duracrete>
+		</products>
+		<recipeUsers Inherit="False">
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+	  </RecipeDef>
 		
 </Defs>

@@ -188,6 +188,44 @@
 		</recipeUsers>
 	</RecipeDef>
 	
+	<!-- Recipe 40x -->
+	<RecipeDef>
+		<defName>KotORRecipe_4xRhydonium</defName>
+		<label>Refine 40 Rhydonium</label>
+		<description>Refine 40 Rhydonium</description>
+		<jobString>Refining 40 Rhydonium</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>14000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawRhydonium</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawRhydonium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_Rhydonium>40</KOTOR_Rhydonium>
+		</products>
+		<skillRequirements>
+			<Intellectual>10</Intellectual>
+		</skillRequirements>
+		<workSkill>Intellectual</workSkill>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_fuelrefinery</li>
+		</recipeUsers>
+	</RecipeDef>
+	
 	
   
 </Defs>

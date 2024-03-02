@@ -18,6 +18,20 @@
 		<drawGUIOverlay>true</drawGUIOverlay>
 		<tradeability>All</tradeability>
 		<techLevel>Spacer</techLevel>
+		
+		<recipeMaker>
+		  <recipeUsers>
+			<li>guy762_KotORWorkbench</li>
+			<li>kotor_DrugLab</li>
+		  </recipeUsers>
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+		  <displayPriority>500</displayPriority>
+		  <useIngredientsForColor>false</useIngredientsForColor>
+		</recipeMaker>
 	</ThingDef>
 	
 	
@@ -36,7 +50,23 @@
 		<statBases>
 		  <MarketValue>100</MarketValue>
 		  <Mass>4</Mass>
+		  
+		  <WorkToMake>12000</WorkToMake>
 		</statBases>
+		
+		<recipeMaker>
+		  <skillRequirements>
+			<Crafting>7</Crafting>
+		  </skillRequirements>
+		  <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		  <bulkRecipeCount>5</bulkRecipeCount>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<Steel>30</Steel>
+			<KOTOR_Rhydonium>12</KOTOR_Rhydonium>
+		</costList>
+		
 		<stackLimit>25</stackLimit>
 		<tradeTags>
 		  <li>guy762TT_LightMunitions</li>
@@ -61,7 +91,24 @@
 		<statBases>
 		  <MarketValue>200</MarketValue>
 		  <Mass>4</Mass>
+		  
+		  <WorkToMake>16000</WorkToMake>
 		</statBases>
+		
+		<recipeMaker>
+		  <skillRequirements>
+			<Crafting>7</Crafting>
+		  </skillRequirements>
+		  <researchPrerequisite>guy762_ResearchKotOR_blasters</researchPrerequisite>
+		  <bulkRecipeCount>5</bulkRecipeCount>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<Plasteel>30</Plasteel>
+			<!--kotor_plasma>10</kotor_plasma-->
+		</costList>
+		
 		<stackLimit>25</stackLimit>
 		<tradeTags>
 		  <li>guy762TT_LightMunitions</li>
@@ -86,7 +133,24 @@
 		<statBases>
 		  <MarketValue>600</MarketValue>
 		  <Mass>4</Mass>
+		  
+		  <WorkToMake>18000</WorkToMake>
 		</statBases>
+		
+		<recipeMaker>
+		  <skillRequirements>
+			<Crafting>9</Crafting>
+		  </skillRequirements>
+		  <researchPrerequisite>guy762_ResearchKotOR_ion</researchPrerequisite>
+		  <bulkRecipeCount>5</bulkRecipeCount>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<Plasteel>30</Plasteel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		
 		<stackLimit>25</stackLimit>
 		<tradeTags>
 		  <li>guy762TT_LightMunitions</li>
@@ -111,7 +175,24 @@
 		<statBases>
 		  <MarketValue>1000</MarketValue>
 		  <Mass>4</Mass>
+		  
+		  <WorkToMake>20000</WorkToMake>
 		</statBases>
+		
+		<recipeMaker>
+		  <skillRequirements>
+			<Crafting>14</Crafting>
+		  </skillRequirements>
+		  <!--researchPrerequisite>guy762_ResearchKotOR_hvyblasters</researchPrerequisite-->
+		  <bulkRecipeCount>5</bulkRecipeCount>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<Plasteel>30</Plasteel>
+			<Uranium>10</Uranium>
+		</costList>
+		
 		<stackLimit>25</stackLimit>
 		<tradeTags>
 		  <li>guy762TT_LightMunitions</li>

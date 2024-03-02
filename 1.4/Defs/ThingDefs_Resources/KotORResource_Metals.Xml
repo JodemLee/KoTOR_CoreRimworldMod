@@ -143,9 +143,9 @@
 	<!-- Recipe -->
 	<RecipeDef>
 		<defName>kotor_IngotCortosis_recipe</defName>
-		<label>smelt Cortosis ingot</label>
-		<description>smelt a Cortosis ingot.</description>
-		<jobString>Smelting a Cortosis ingot.</jobString>
+		<label>smelt Cortosis</label>
+		<description>smelt a Cortosis sheet.</description>
+		<jobString>Smelting a Cortosis sheet.</jobString>
 		<workSkill>Crafting</workSkill>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
@@ -158,7 +158,7 @@
 						<li>KOTOR_RawCortosis</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>4</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -168,6 +168,43 @@
 		</fixedIngredientFilter>
 		<products>
 			<KOTOR_IngotCortosis>1</KOTOR_IngotCortosis>
+		</products>
+		<skillRequirements>
+			<Crafting>14</Crafting>
+		</skillRequirements>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>kotor_IngotCortosis_10xrecipe</defName>
+		<label>smelt 10 Cortosis</label>
+		<description>smelt 10 Cortosis sheets.</description>
+		<jobString>Smelting 10 Cortosis sheets.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>64000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawCortosis</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawCortosis</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_IngotCortosis>10</KOTOR_IngotCortosis>
 		</products>
 		<skillRequirements>
 			<Crafting>14</Crafting>
@@ -261,7 +298,7 @@
 	<!-- Recipe -->
 	<RecipeDef>
 		<defName>kotor_IngotBeskar_recipe</defName>
-		<label>smelt Beskar ingot</label>
+		<label>smelt Beskar</label>
 		<description>smelt a Beskar ingot.</description>
 		<jobString>Smelting a Beskar ingot.</jobString>
 		<workSkill>Crafting</workSkill>
@@ -286,6 +323,43 @@
 		</fixedIngredientFilter>
 		<products>
 			<KOTOR_IngotBeskar>1</KOTOR_IngotBeskar>
+		</products>
+		<skillRequirements>
+			<Crafting>16</Crafting>
+		</skillRequirements>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>kotor_IngotBeskar_10xrecipe</defName>
+		<label>smelt 10 Beskar</label>
+		<description>smelt 10 Beskar ingots.</description>
+		<jobString>Smelting 10 Beskar ingots.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>75000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>KOTOR_RawBeskar</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>KOTOR_RawBeskar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_IngotBeskar>10</KOTOR_IngotBeskar>
 		</products>
 		<skillRequirements>
 			<Crafting>16</Crafting>
@@ -346,6 +420,52 @@
 		</fixedIngredientFilter>
 		<products>
 			<Plasteel>5</Plasteel>
+		</products>
+		<skillRequirements>
+			<Crafting>12</Crafting>
+		</skillRequirements>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>kotor_Plasteel_10xrecipe</defName>
+		<label>smelt 50 Plasteel</label>
+		<description>smelt 50 Plasteel sheets.</description>
+		<jobString>Smelting 50 Plasteel sheets.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>32000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>250</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>50</Plasteel>
 		</products>
 		<skillRequirements>
 			<Crafting>12</Crafting>
@@ -551,6 +671,52 @@
 		</fixedIngredientFilter>
 		<products>
 			<KOTOR_AlloyDurasteel>5</KOTOR_AlloyDurasteel>
+		</products>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<displayPriority>10</displayPriority>
+		<recipeUsers>
+			<li>kotor_PlasmaFurnace</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>kotor_IngotDurasteel_10xrecipe</defName>
+		<label>smelt 50 Durasteel</label>
+		<description>smelt 50 Durasteel ingots.</description>
+		<jobString>Smelting 50 Durasteel ingots.</jobString>
+		<workSkill>Crafting</workSkill>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<workAmount>25000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KOTOR_AlloyDurasteel>50</KOTOR_AlloyDurasteel>
 		</products>
 		<skillRequirements>
 			<Crafting>8</Crafting>

@@ -133,7 +133,7 @@
 		<techLevel>Ultra</techLevel>
 	</ThingDef>
 	
-	<ThingDef>
+	<ThingDef ParentName="ResourceBase">
 		<defName>guy762_crystalitem_krayt</defName>
 		<label>Krayt Dragon Pearl</label>
 		<description>Taken from the gullet of a krayt dragon, this crystalline "pearl" appears to have refractory qualities that might allow it to function as a lightsaber crystal once properly adapted.</description>

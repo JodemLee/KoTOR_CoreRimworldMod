@@ -132,6 +132,25 @@
 		<tradeability>All</tradeability>
 		<techLevel>Ultra</techLevel>
 	</ThingDef>
+	
+	<ThingDef ParentName="guy762_crystalbase">
+		<defName>guy762_crystalitem_krayt</defName>
+		<label>Krayt Dragon Pearl</label>
+		<description>Taken from the gullet of a krayt dragon, this crystalline "pearl" appears to have refractory qualities that might allow it to function as a lightsaber crystal once properly adapted.</description>
+		<graphicData>
+		  <texPath>Items/crystal_pearl</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>TransparentPostLight</shaderType>
+		  <color>(255,255,180)</color>
+		</graphicData>
+		<statBases>
+		  <MarketValue>2500</MarketValue>
+		  <Mass>0.4</Mass>
+		</statBases>
+		<tradeTags>
+		  <li>guy762TT_sabermod_adv</li>
+		</tradeTags>
+	</ThingDef>
 
 
 

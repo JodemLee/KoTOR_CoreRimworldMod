@@ -325,6 +325,7 @@
 		<graphicData>
 		  <texPath>Items/Medkits</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.85</drawSize>
 		</graphicData>
 		<soundInteract>kotorsound_select_JKmedkit</soundInteract>
 		<soundDrop>kotorsound_select_JKmedkit</soundDrop>

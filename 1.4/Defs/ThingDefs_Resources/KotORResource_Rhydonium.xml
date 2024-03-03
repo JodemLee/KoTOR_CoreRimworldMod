@@ -8,8 +8,8 @@
 		<label>Rhydonium deposit</label>
 		<description>A highly-volatile deposit of Rhydonium fuel. Attacks from any explosives or blaster weapons will detonate this deposit resulting in a massive explosion, though it can safely be mined or destroyed using sonic weapons and specialized mining lasers.</description>
 		<graphicData>
-			<color>(60,60,50)</color>
-			<colorTwo>(255,150,0)</colorTwo>
+			<color>(60,50,50)</color>
+			<colorTwo>(255,110,100)</colorTwo>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>2000</MaxHitPoints>
@@ -56,7 +56,7 @@
 		<possessionCount>20</possessionCount>
 		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>raw_resources/unrefined_fuel</texPath>
+			<texPath>raw_resources/rhydonium/RawRhydonium</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 			<drawSize>1.5</drawSize>
 		</graphicData>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <HediffDef>
@@ -29,6 +29,7 @@
     <graphicData>
       <texPath>consumables/Medpacs/medpac</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
@@ -96,6 +97,7 @@
     <graphicData>
       <texPath>consumables/Medpacs/medpac_adv</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
@@ -162,6 +164,7 @@
     <graphicData>
       <texPath>consumables/Medpacs/medpac_life</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
@@ -226,6 +229,7 @@
     <graphicData>
       <texPath>consumables/Medpacs/medpac_antidote</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>

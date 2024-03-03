@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <HediffDef>
@@ -30,6 +30,7 @@
     <graphicData>
       <texPath>consumables/Stimulants/stim_blue</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.75</drawSize>
     </graphicData>
     <socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
@@ -113,6 +114,7 @@
     <graphicData>
       <texPath>consumables/Stimulants/hyperstim_blue</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.75</drawSize>
     </graphicData>
 	<descriptionHyperlinks>
 		<HediffDef>guy762_drugtolerance_strstim</HediffDef>

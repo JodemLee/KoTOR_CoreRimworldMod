@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- Czerka-Tech Research Bench ============================================================================================================================ -->
+	<ThingDef ParentName="BenchBase">
+		
+		<!-- Base -->
+		<defName>kotor_CzerkaTechResearchBench</defName>
+		<label>czerkatech research bench</label>
+		<description>A high-tech bench with computers and electronic measurement equipment. Allows more rapid research, and unlocks czerkatech research projects.</description>
+		<thingClass>Building_ResearchBench</thingClass>
+		<thingCategories Inherit="false" />
+		
+		<!-- Texture -->
+		<graphicData>
+			<texPath>production_buildings/Czerkatech_ResearchBench/CzekaTech_ReasearchBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3,3)</drawSize>
+			<damageData>
+			<cornerTL>Damage/Corner</cornerTL>
+			<cornerTR>Damage/Corner</cornerTR>
+			<cornerBL>Damage/Corner</cornerBL>
+			<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		
+		<!-- Cost -->
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>250</costStuffCount>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		
+		<!-- Stats -->
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<ResearchSpeedFactor>1.25</ResearchSpeedFactor>
+		</statBases>
+		
+		<!-- Menu -->
+		<designationCategory>KOTOR_BuildTab</designationCategory>
+		
+		<!-- World -->
+		<size>(3,1)</size>
+		<minifiedDef />
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<surfaceType>Item</surfaceType>
+		
+		<!-- Comps -->
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+				<shortCircuitInRain>true</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+				  <li>MultiAnalyzer</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		
+		<!-- Requirements -->
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>KOTOR_Research_Czerkatech</li>
+		</researchPrerequisites>
+		
+	</ThingDef>
+
+	
+</Defs>

@@ -63,8 +63,9 @@
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>3</ComponentIndustrial>
+			<KOTOR_Rhydonium>1</KOTOR_Rhydonium>
 			<Steel>30</Steel>
-			<KOTOR_Rhydonium>12</KOTOR_Rhydonium>
+			<KOTOR_RawRhydonium>10</KOTOR_RawRhydonium>
 		</costList>
 		
 		<stackLimit>25</stackLimit>
@@ -104,7 +105,7 @@
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<KOTOR_Rhydonium>1</KOTOR_Rhydonium>
 			<Plasteel>30</Plasteel>
 			<!--kotor_plasma>10</kotor_plasma-->
 		</costList>
@@ -146,7 +147,7 @@
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<KOTOR_Rhydonium>1</KOTOR_Rhydonium>
 			<Plasteel>30</Plasteel>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
@@ -188,7 +189,7 @@
 		</recipeMaker>
 		<costList>
 			<ComponentIndustrial>3</ComponentIndustrial>
-			<KOTOR_Rhydonium>2</KOTOR_Rhydonium>
+			<KOTOR_Rhydonium>1</KOTOR_Rhydonium>
 			<Plasteel>30</Plasteel>
 			<Uranium>10</Uranium>
 		</costList>
